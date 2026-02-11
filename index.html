@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar" id="home">
+    <div class="logo" aria-label="Logo">[SE]</div>
+    <div class="topbar-actions">
+      <button class="lang-switch" type="button" aria-label="Sprache wechseln">DE</button>
+      <button class="menu-btn" type="button" aria-label="Menue">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <p class="hero-side">Frontend Developer</p>
+      <div class="hero-content">
+        <h1>
+          Frontend<br />
+          Developer
+        </h1>
+        <div class="hero-meta">
+          <span class="hero-line"></span>
+          <p class="accent">Dein Name</p>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#about" aria-label="Zu About springen">
+        <span class="arrow-down"></span>
+        <span>Scroll<br />Down</span>
+      </a>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-copy">
+        <h2>About me</h2>
+        <p>
+          Ich bin angehender Frontend Developer mit Fokus auf klare Benutzerfuehrung,
+          performante UIs und saubere, wartbare Komponenten. Ich arbeite strukturiert,
+          kommuniziere direkt und setze Projekte zielorientiert um.
+        </p>
+        <ul>
+          <li>
+            <img src="img/icons/house.svg" alt="" />
+            <span>Based in Musterstadt</span>
+          </li>
+          <li>
+            <img src="img/icons/laptop_chromebook.svg" alt="" />
+            <span>Open to work remote</span>
+          </li>
+        </ul>
+        <a class="outline-btn" href="#contact">Let&apos;s talk</a>
+      </div>
+      <div class="about-photo" role="img" aria-label="Dein Profilfoto">
+        <div class="photo-placeholder">
+          <span>Hier dein Foto einbauen</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section" id="skills">
+      <h2>My skills</h2>
+      <div class="skills-frame">
+        <div class="skills-grid">
+          <article><img src="img/icons/angular.svg" alt="Angular" /><span>Angular</span></article>
+          <article><img src="img/icons/typescript.svg" alt="TypeScript" /><span>TypeScript</span></article>
+          <article><img src="img/icons/javascript.svg" alt="JavaScript" /><span>JavaScript</span></article>
+          <article><img src="img/icons/html.svg" alt="HTML" /><span>HTML</span></article>
+          <article><img src="img/icons/css.svg" alt="CSS" /><span>CSS</span></article>
+          <article><img src="img/icons/firebase.svg" alt="Firebase" /><span>Firebase</span></article>
+          <article><img src="img/icons/git.svg" alt="Git" /><span>Git</span></article>
+          <article><img src="img/icons/scrum.svg" alt="Scrum" /><span>Scrum</span></article>
+          <article><img src="img/icons/rest-api.svg" alt="REST API" /><span>REST API</span></article>
+          <article><img src="img/icons/material-design.svg" alt="Material Design" /><span>Material Design</span></article>
+        </div>
+        <p class="skills-note">
+          Don&apos;t see the skill you need? <a href="#contact">Contact me</a>. I am always ready to learn.
+        </p>
+      </div>
+    </section>
+
+    <section class="portfolio section" id="portfolio">
+      <h2>Portfolio</h2>
+      <p class="section-lead">Eine Auswahl meiner Projekte mit Fokus auf Frontend-Umsetzung und UX.</p>
+
+      <div class="project-row">
+        <div class="project-card card-light">
+          <div class="project-preview">Projekt 01 Screenshot</div>
+        </div>
+        <p class="project-count">01/04</p>
+      </div>
+
+      <div class="project-row reverse">
+        <p class="project-count">02/04</p>
+        <div class="project-card card-dark">
+          <div class="project-preview">Projekt 02 Screenshot</div>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-card card-light">
+          <div class="project-preview">Projekt 03 Screenshot</div>
+        </div>
+        <p class="project-count">03/04</p>
+      </div>
+
+      <div class="project-row reverse">
+        <p class="project-count">04/04</p>
+        <div class="project-card card-light">
+          <div class="project-preview">Projekt 04 Screenshot</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="references section" id="references">
+      <h2>References</h2>
+      <p class="section-lead">
+        Ich arbeite eigenstaendig und gleichzeitig teamorientiert. Kurzes Feedback aus Projekten:
+      </p>
+      <div class="reference-grid">
+        <article>
+          <h3>V. Schwartz</h3>
+          <p>
+            "Zuverlaessig, stark in der Umsetzung und mit gutem Blick fuer Details. Die Kommunikation war jederzeit klar."
+          </p>
+        </article>
+        <article>
+          <h3>E. Fischer</h3>
+          <p>
+            "Sehr strukturierte Arbeitsweise. Probleme wurden frueh erkannt und sauber geloest, ohne den Zeitplan zu riskieren."
+          </p>
+        </article>
+        <article>
+          <h3>L. Huber</h3>
+          <p>
+            "Hat Verantwortung uebernommen und Features von Idee bis Deployment solide begleitet."
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>Say Hi!</h2>
+      <p class="contact-lead">Du suchst Unterstuetzung fuer ein Frontend-Projekt? Schreib mir.</p>
+      <form class="contact-form" id="contact-form" novalidate>
+        <label>
+          Dein Name
+          <input type="text" name="name" required minlength="2" />
+        </label>
+        <label>
+          Deine E-Mail
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Deine Nachricht
+          <textarea name="message" rows="4" required minlength="10"></textarea>
+        </label>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <button class="outline-btn" type="submit">Send message</button>
+      </form>
+      <footer class="contact-footer">
+        <p>[SE] &copy; 2026</p>
+        <div class="socials">
+          <a href="#" aria-label="GitHub">GH</a>
+          <a href="#" aria-label="Email">Mail</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
