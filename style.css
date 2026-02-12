@@ -490,7 +490,8 @@ h2 {
 
 .socials {
   display: flex;
-  gap: 14px;
+  gap: 12px;
+  align-items: center;
 }
 
 .socials a {
@@ -498,6 +499,18 @@ h2 {
   text-decoration: none;
   font-weight: 700;
   font-size: 0.82rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon img {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
 .legal-main {
