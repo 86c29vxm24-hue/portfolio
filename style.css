@@ -343,18 +343,47 @@ h2 {
 }
 
 .about-photo {
+  --about-frame-offset: 16px;
   grid-area: photo;
   justify-self: start;
   transform: translateX(-20px);
+  width: min(100%, 430px);
+  aspect-ratio: 1 / 1;
+  position: relative;
+  isolation: isolate;
 }
 
 .about-photo-img {
-  width: min(100%, 430px);
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: 100%;
   border: 0;
   object-fit: cover;
   object-position: center 18%;
   display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.about-photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid var(--line);
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: opacity 180ms ease, transform 200ms ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.about-photo:hover::after,
+.about-photo:focus-within::after {
+  opacity: 1;
+  transform: translate(var(--about-frame-offset), var(--about-frame-offset));
 }
 
 .about .primary-btn {
@@ -919,12 +948,19 @@ h2 {
   }
 
   .about-photo-img {
-    width: min(100%, 360px);
+    width: 100%;
   }
 
   .about-photo {
+    --about-frame-offset: 10px;
     justify-self: start;
     transform: none;
+    width: min(100%, 360px);
+  }
+
+  .about-photo::after {
+    inset: 0;
+    border-width: 2px;
   }
 
   .about .primary-btn {
