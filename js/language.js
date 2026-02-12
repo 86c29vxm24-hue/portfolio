@@ -100,7 +100,15 @@ const applyLanguage = (lang) => {
   });
 };
 
+let isLanguageSwitcherInitialized = false;
+
 const initLanguageSwitcher = () => {
+  if (isLanguageSwitcherInitialized || !langButtons.length) {
+    return;
+  }
+
+  isLanguageSwitcherInitialized = true;
+
   langButtons.forEach((button) => {
     button.addEventListener("click", () => {
       applyLanguage(button.dataset.lang || "de");
@@ -114,3 +122,9 @@ window.t = t;
 window.getLanguage = getLanguage;
 window.applyLanguage = applyLanguage;
 window.initLanguageSwitcher = initLanguageSwitcher;
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initLanguageSwitcher, { once: true });
+} else {
+  initLanguageSwitcher();
+}
