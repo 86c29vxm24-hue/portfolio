@@ -655,6 +655,10 @@ h2 {
   text-align: center;
 }
 
+.portfolio h2 {
+  font-size: clamp(3rem, 6.2vw, 5.4rem);
+}
+
 .section-lead {
   margin: 10px auto 44px;
   max-width: 47ch;
