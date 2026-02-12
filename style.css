@@ -6,7 +6,7 @@
   --accent: #00d8b0;
   --night: #030303;
   --panel: #faf9f4;
-  --max-width: 1180px;
+  --max-width: 1440px;
 }
 
 * {
@@ -48,16 +48,21 @@ h2 {
 }
 
 .topbar {
-  width: min(100%, var(--max-width));
-  margin: 0 auto;
-  padding: 24px 24px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  padding: 0 24px;
   position: sticky;
   top: 0;
   z-index: 100;
   background: var(--bg-paper);
+}
+
+.topbar-inner {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+  padding: 24px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
