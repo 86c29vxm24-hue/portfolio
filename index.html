@@ -14,7 +14,11 @@
     <div class="topbar-inner">
       <div class="logo" aria-label="Logo">[SE]</div>
       <div class="topbar-actions">
-        <button class="lang-switch" type="button" aria-label="Sprache wechseln">DE</button>
+        <div class="lang-toggle" aria-label="Sprache wechseln">
+          <button class="lang-btn active" type="button" data-lang="de" aria-label="Deutsch">DE</button>
+          <span>/</span>
+          <button class="lang-btn" type="button" data-lang="en" aria-label="English">EN</button>
+        </div>
         <button class="menu-btn" type="button" aria-label="Menue">
           <span></span>
           <span></span>
@@ -43,8 +47,8 @@
     </section>
     <section class="about section" id="about">
       <div class="about-copy">
-        <h2>About me</h2>
-        <p>
+        <h2 data-i18n="about_title">About me</h2>
+        <p data-i18n="about_text">
           Ich entwickle Frontends, die nicht nur gut aussehen, sondern messbar funktionieren:
           klare Nutzerfuehrung, saubere Komponenten und stabile Performance. Ich arbeite
           strukturiert, denke produktorientiert und bringe Aufgaben verlässlich vom Konzept
@@ -54,15 +58,15 @@
         <ul>
           <li>
             <img src="img/icons/house.svg" alt="" />
-            <span>Based in Köln</span>
+            <span data-i18n="based_in">Based in Köln</span>
           </li>
           <li>
             <img src="img/icons/laptop_chromebook.svg" alt="" />
-            <span>Remote preferred</span>
+            <span data-i18n="remote_preferred">Remote preferred</span>
           </li>
         </ul>
-        <a class="outline-btn primary-btn" href="#contact" aria-label="Let's talk">
-          <span class="visually-hidden">Let&apos;s talk</span>
+        <a class="outline-btn primary-btn" href="#contact" aria-label="Let's talk" data-i18n-aria="lets_talk">
+          <span class="visually-hidden" data-i18n="lets_talk">Let&apos;s talk</span>
         </a>
       </div>
       <div class="about-photo" role="img" aria-label="Dein Profilfoto">
@@ -92,11 +96,11 @@
 
     <section class="portfolio section" id="portfolio">
       <h2>Portfolio</h2>
-      <p class="section-lead">Eine Auswahl meiner Projekte mit Fokus auf Frontend-Umsetzung und UX.</p>
+      <p class="section-lead" data-i18n="portfolio_lead">Eine Auswahl meiner Projekte mit Fokus auf Frontend-Umsetzung und UX.</p>
 
       <div class="project-row">
         <a class="project-card card-light" href="#" target="_blank" rel="noopener noreferrer">
-          <div class="project-preview">Projekt 01 Screenshot</div>
+          <div class="project-preview" data-i18n="project_1">Projekt 01 Screenshot</div>
         </a>
         <p class="project-count">01/04</p>
       </div>
@@ -104,13 +108,13 @@
       <div class="project-row reverse">
         <p class="project-count">02/04</p>
         <a class="project-card card-dark" href="#" target="_blank" rel="noopener noreferrer">
-          <div class="project-preview">Projekt 02 Screenshot</div>
+          <div class="project-preview" data-i18n="project_2">Projekt 02 Screenshot</div>
         </a>
       </div>
 
       <div class="project-row">
         <a class="project-card card-light" href="#" target="_blank" rel="noopener noreferrer">
-          <div class="project-preview">Projekt 03 Screenshot</div>
+          <div class="project-preview" data-i18n="project_3">Projekt 03 Screenshot</div>
         </a>
         <p class="project-count">03/04</p>
       </div>
@@ -118,7 +122,7 @@
       <div class="project-row reverse">
         <p class="project-count">04/04</p>
         <a class="project-card card-light" href="#" target="_blank" rel="noopener noreferrer">
-          <div class="project-preview">Projekt 04 Screenshot</div>
+          <div class="project-preview" data-i18n="project_4">Projekt 04 Screenshot</div>
         </a>
       </div>
     </section>
@@ -127,8 +131,8 @@
     </div>
 
     <section class="references section" id="references">
-      <h2>References</h2>
-      <p class="section-lead">
+      <h2 data-i18n="references_title">References</h2>
+      <p class="section-lead" data-i18n="references_lead">
         Ich arbeite eigenstaendig und gleichzeitig teamorientiert. Kurzes Feedback aus Projekten:
       </p>
       <div class="reference-grid">
@@ -158,30 +162,30 @@
 
     <section class="contact section" id="contact">
       <h2>Say Hi!</h2>
-      <p class="contact-lead">Du suchst Unterstuetzung fuer ein Frontend-Projekt? Schreib mir.</p>
+      <p class="contact-lead" data-i18n="contact_lead">Du suchst Unterstuetzung fuer ein Frontend-Projekt? Schreib mir.</p>
       <form class="contact-form" id="contact-form" novalidate>
         <label>
-          Dein Name
+          <span class="label-text" data-i18n="label_name">Dein Name</span>
           <input type="text" name="name" required minlength="2" />
           <span class="field-error" data-error-for="name" aria-live="polite"></span>
         </label>
         <label>
-          Deine E-Mail
+          <span class="label-text" data-i18n="label_email">Deine E-Mail</span>
           <input type="email" name="email" required />
           <span class="field-error" data-error-for="email" aria-live="polite"></span>
         </label>
         <label>
-          Deine Nachricht
+          <span class="label-text" data-i18n="label_message">Deine Nachricht</span>
           <textarea name="message" rows="4" required minlength="10"></textarea>
           <span class="field-error" data-error-for="message" aria-live="polite"></span>
         </label>
         <label class="privacy-row">
           <input type="checkbox" name="privacy" required />
-          <span>Ich habe die Datenschutzerklaerung gelesen und stimme zu.</span>
+          <span data-i18n="privacy_text">Ich habe die Datenschutzerklaerung gelesen und stimme zu.</span>
         </label>
         <span class="field-error" data-error-for="privacy" aria-live="polite"></span>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        <button class="outline-btn" type="submit" disabled>Send message</button>
+        <button class="outline-btn" type="submit" disabled data-i18n="send_message">Send message</button>
       </form>
       <footer class="contact-footer">
         <p>[SE] &copy; 2026</p>
