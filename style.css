@@ -155,7 +155,7 @@ h2 {
 }
 
 .hero {
-  --hero-side-y: 73%;
+  --hero-side-y: 80%;
   --scroll-visual-offset: 76px;
   min-height: 100vh;
   display: grid;
@@ -170,7 +170,8 @@ h2 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  transform: translateY(-7vh);
 }
 
 .hero-side {
@@ -187,6 +188,7 @@ h2 {
 .hero h1 {
   font-size: clamp(3.4rem, 9vw, 7.3rem);
   line-height: 0.86;
+  text-align: center;
 }
 
 .hero-meta {
@@ -834,6 +836,8 @@ h2 {
 
   .hero-content {
     width: 100%;
+    transform: none;
+    align-items: flex-start;
   }
 
   .hero-side {
