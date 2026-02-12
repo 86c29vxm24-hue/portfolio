@@ -251,50 +251,34 @@ h2 {
 }
 
 .skills {
-  padding-top: 66px;
+  padding-top: 64px;
 }
 
-.skills h2,
+.skills-figure {
+  margin: 0 auto;
+  width: min(100%, 1100px);
+  position: relative;
+}
+
+.skills-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skills-contact-link {
+  position: absolute;
+  left: 58%;
+  top: 86%;
+  width: 18%;
+  height: 8%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+}
+
 .portfolio h2,
 .references h2 {
   text-align: center;
-}
-
-.skills-frame {
-  margin-top: 12px;
-  border: 1px solid var(--line);
-  padding: 30px 28px 20px;
-  background: var(--panel);
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(95px, 1fr));
-  gap: 22px 12px;
-}
-
-.skills-grid article {
-  display: grid;
-  justify-items: center;
-  gap: 8px;
-  text-align: center;
-  font-size: 0.78rem;
-}
-
-.skills-grid img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-}
-
-.skills-note {
-  margin: 22px 0 0;
-  text-align: center;
-  font-size: 0.92rem;
-}
-
-.skills-note a {
-  color: var(--accent);
 }
 
 .section-lead {
@@ -575,10 +559,6 @@ h2 {
     justify-self: start;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(3, minmax(95px, 1fr));
-  }
-
   .reference-grid {
     grid-template-columns: 1fr;
   }
@@ -614,10 +594,6 @@ h2 {
 
   .project-count {
     justify-self: end;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, minmax(95px, 1fr));
   }
 
   .contact::before {
