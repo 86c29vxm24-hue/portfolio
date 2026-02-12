@@ -198,3 +198,68 @@ if (form && statusEl) {
 if (window.initLanguageSwitcher) {
   window.initLanguageSwitcher();
 }
+
+const inlineSkillSvgs = async () => {
+  const skillImages = document.querySelectorAll(".skill-item img[src$='.svg']");
+
+  if (!skillImages.length) {
+    return;
+  }
+
+  await Promise.all(
+    Array.from(skillImages).map(async (img) => {
+      try {
+        const src = img.getAttribute("src");
+        if (!src) {
+          return;
+        }
+
+        const response = await fetch(src);
+        if (!response.ok) {
+          return;
+        }
+
+        const svgText = await response.text();
+        const parsed = new DOMParser().parseFromString(svgText, "image/svg+xml");
+        const svg = parsed.querySelector("svg");
+
+        if (!svg) {
+          return;
+        }
+
+        svg.classList.add("skill-svg");
+        svg.removeAttribute("width");
+        svg.removeAttribute("height");
+
+        const alt = img.getAttribute("alt");
+        if (alt) {
+          svg.setAttribute("role", "img");
+          svg.setAttribute("aria-label", alt);
+        } else {
+          svg.setAttribute("aria-hidden", "true");
+        }
+
+        img.replaceWith(svg);
+
+        const viewBox = svg.viewBox && svg.viewBox.baseVal ? svg.viewBox.baseVal : null;
+        const textStartY = viewBox ? viewBox.y + viewBox.height * 0.74 : 76;
+        const shapeSelector = "path, rect, circle, ellipse, polygon, polyline, line";
+
+        svg.querySelectorAll(shapeSelector).forEach((shape) => {
+          try {
+            const box = shape.getBBox();
+            if (box.y >= textStartY) {
+              shape.classList.add("skill-svg-label");
+            }
+          } catch (error) {
+            // Ignore non-rendered shapes that cannot provide a bounding box.
+          }
+        });
+      } catch (error) {
+        // Keep the original image if inline conversion fails.
+      }
+    })
+  );
+};
+
+inlineSkillSvgs();

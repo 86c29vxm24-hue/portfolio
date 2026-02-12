@@ -462,12 +462,62 @@ h2 {
 .skill-item {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .skill-item img {
   width: min(100%, 100px);
   height: auto;
   display: block;
+}
+
+.skill-item .skill-svg {
+  width: min(100%, 100px);
+  height: auto;
+  display: block;
+}
+
+.skill-item .skill-svg [fill]:not([fill="none"]) {
+  transition: fill 150ms ease;
+}
+
+.skill-item .skill-svg [stroke]:not([stroke="none"]) {
+  transition: stroke 150ms ease;
+}
+
+.skill-item:hover img,
+.skill-item:focus-within img {
+  animation: skill-loop 460ms ease-in-out 1;
+}
+
+.skill-item:hover .skill-svg,
+.skill-item:focus-within .skill-svg {
+  animation: skill-loop 460ms ease-in-out 1;
+}
+
+.skill-item:hover .skill-svg .skill-svg-label[fill]:not([fill="none"]),
+.skill-item:focus-within .skill-svg .skill-svg-label[fill]:not([fill="none"]) {
+  fill: var(--contact-accent);
+}
+
+.skill-item:hover .skill-svg .skill-svg-label[stroke]:not([stroke="none"]),
+.skill-item:focus-within .skill-svg .skill-svg-label[stroke]:not([stroke="none"]) {
+  stroke: var(--contact-accent);
+}
+
+@keyframes skill-loop {
+  0% {
+    transform: translateX(0);
+  }
+  49% {
+    transform: translateX(118%);
+  }
+  50% {
+    transform: translateX(-118%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .section[id] {
