@@ -201,6 +201,15 @@ h2 {
   font-size: 0.95rem;
   letter-spacing: 0.04em;
   text-transform: none;
+  color: var(--ink);
+  text-decoration: none;
+  z-index: 2;
+  transition: color 140ms ease;
+}
+
+.hero-side:hover,
+.hero-side:focus-visible {
+  color: var(--contact-accent);
 }
 
 .hero h1 {
