@@ -6,7 +6,8 @@ Dieses Projekt ist eine One-Page-Portfolio-Seite im Stil deiner Figma-Vorlage.
 
 - `index.html`: Struktur und Inhalte der Seite
 - `style.css`: komplettes Design und Responsive-Verhalten
-- `script.js`: Formular-Validierung im Kontaktbereich
+- `js/language.js`: Sprachumschaltung (DE/EN)
+- `js/script.js`: Formular-Validierung und Versandlogik im Kontaktbereich
 - `img/icons/`: verwendete Skill-Icons
 - `Portfolio-Checkliste.pdf`: Projekt-Checkliste (Anforderungen)
 
@@ -35,7 +36,7 @@ Passe in `index.html` an:
 
 ## Kontaktformular
 
-In `script.js` ist aktuell nur Client-Validation enthalten:
+In `js/script.js` ist aktuell Client-Validation plus Versandlogik enthalten:
 
 - Name: mindestens 2 Zeichen
 - E-Mail: gültiges Format
