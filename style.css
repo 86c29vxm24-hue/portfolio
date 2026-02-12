@@ -229,34 +229,55 @@ h2 {
 
 .about {
   display: grid;
-  grid-template-columns: 1fr minmax(250px, 340px);
-  gap: 56px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 460px);
+  grid-template-areas:
+    "title title"
+    "copy photo";
+  gap: 22px 12px;
+  align-items: start;
+}
+
+.about-title {
+  grid-area: title;
+  margin-top: 0;
+  justify-self: start;
+  width: fit-content;
+  text-align: left;
+  margin-left: clamp(26px, 8vw, 170px);
+  font-size: clamp(3rem, 6.2vw, 5.4rem);
+}
+
+.about-copy {
+  grid-area: copy;
 }
 
 .about-copy p {
-  max-width: 44ch;
-  margin: 18px 0 20px;
+  max-width: 46ch;
+  margin: 12px 0 20px;
+  margin-left: clamp(26px, 8vw, 170px);
+  font-size: clamp(1.1rem, 1.7vw, 1.55rem);
+  line-height: 1.28;
 }
 
 .about-copy ul {
   list-style: none;
   margin: 0 0 24px;
+  margin-left: clamp(26px, 8vw, 170px);
   padding: 0;
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .about-copy li {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
 }
 
 .about-copy li img {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
 }
 
 .outline-btn {
@@ -304,15 +325,22 @@ h2 {
 }
 
 .about-photo {
-  justify-self: end;
+  grid-area: photo;
+  justify-self: start;
+  transform: translateX(-20px);
 }
 
 .about-photo-img {
-  width: min(100%, 300px);
-  aspect-ratio: 4 / 5;
-  border: 1px solid var(--line);
+  width: min(100%, 430px);
+  aspect-ratio: 1 / 1;
+  border: 0;
   object-fit: cover;
+  object-position: center 18%;
   display: block;
+}
+
+.about .primary-btn {
+  margin-left: clamp(130px, 18vw, 320px);
 }
 
 .photo-placeholder {
@@ -369,6 +397,21 @@ h2 {
 
 .section-arrow-right .section-arrow-icon {
   transform: scaleX(-1);
+}
+
+.about-arrow {
+  margin-top: -2px;
+  margin-bottom: -14px;
+  height: 108px;
+}
+
+.about-arrow .section-arrow-icon {
+  width: 112px;
+  height: 112px;
+}
+
+.about-arrow .section-arrow-icon::before {
+  transform: translateX(1.7px);
 }
 
 .section-arrow-link:hover .section-arrow-icon,
@@ -852,10 +895,24 @@ h2 {
 
   .about {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "copy"
+      "photo";
+    gap: 22px;
+  }
+
+  .about-photo-img {
+    width: min(100%, 360px);
   }
 
   .about-photo {
     justify-self: start;
+    transform: none;
+  }
+
+  .about .primary-btn {
+    margin-left: 0;
   }
 
   .reference-grid {
