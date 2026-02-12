@@ -93,7 +93,7 @@ h2 {
 }
 
 .hero {
-  min-height: 72vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr auto;
   position: relative;
@@ -465,7 +465,7 @@ h2 {
   .hero {
     grid-template-columns: 1fr;
     gap: 24px;
-    min-height: auto;
+    min-height: 100vh;
   }
 
   .hero-side {
