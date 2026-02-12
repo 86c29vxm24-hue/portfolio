@@ -292,6 +292,14 @@ h2 {
   justify-self: end;
 }
 
+.about-photo-img {
+  width: min(100%, 300px);
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--line);
+  object-fit: cover;
+  display: block;
+}
+
 .photo-placeholder {
   width: min(100%, 300px);
   aspect-ratio: 4 / 5;
