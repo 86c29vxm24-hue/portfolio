@@ -285,15 +285,64 @@ h2 {
   width: min(100%, var(--max-width));
   margin: -14px auto -10px;
   padding: 0 24px;
-  height: 72px;
+  height: 88px;
   display: flex;
   align-items: flex-start;
+  text-decoration: none;
 }
 
-.section-arrow img {
-  width: 76px;
-  height: 76px;
+.section-arrow-icon {
+  position: relative;
+  width: 92px;
+  height: 92px;
   display: block;
+  background: var(--ink);
+  -webkit-mask: url("img/icons/arrow 3.svg") center / contain no-repeat;
+  mask: url("img/icons/arrow 3.svg") center / contain no-repeat;
+  transition: transform 130ms ease, background-color 130ms ease, filter 130ms ease;
+}
+
+.section-arrow-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  -webkit-mask: inherit;
+  mask: inherit;
+  transform: translateX(0.9px);
+}
+
+.section-arrow-right {
+  justify-content: flex-end;
+}
+
+.section-arrow-right .section-arrow-icon {
+  transform: scaleX(-1);
+}
+
+.section-arrow:hover .section-arrow-icon,
+.section-arrow:focus-visible .section-arrow-icon {
+  background: var(--contact-accent);
+  filter: drop-shadow(0 0 8px rgba(0, 188, 143, 0.45));
+  transform: translateY(6px) scale(1.02);
+}
+
+.section-arrow:active .section-arrow-icon {
+  transform: translateY(9px) scale(1.01);
+}
+
+.section-arrow-right:hover .section-arrow-icon,
+.section-arrow-right:focus-visible .section-arrow-icon {
+  transform: translateY(6px) scale(1.02) scaleX(-1);
+}
+
+.section-arrow-right:active .section-arrow-icon {
+  transform: translateY(9px) scale(1.01) scaleX(-1);
+}
+
+.section-arrow:focus-visible {
+  outline: 2px solid rgba(0, 188, 143, 0.75);
+  outline-offset: 3px;
 }
 
 .skills {
@@ -391,6 +440,10 @@ h2 {
   width: min(100%, 100px);
   height: auto;
   display: block;
+}
+
+.section[id] {
+  scroll-margin-top: 90px;
 }
 
 #contact {
@@ -701,13 +754,13 @@ h2 {
   }
 
   .section-arrow {
-    height: 44px;
+    height: 60px;
     margin: -10px auto -6px;
   }
 
-  .section-arrow img {
-    width: 44px;
-    height: 44px;
+  .section-arrow-icon {
+    width: 56px;
+    height: 56px;
   }
 
   .skills-frame {
