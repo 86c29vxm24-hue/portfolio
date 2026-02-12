@@ -461,6 +461,41 @@ h2 {
   font-weight: 700;
 }
 
+.legal-main {
+  min-height: calc(100vh - 210px);
+  padding-top: 48px;
+}
+
+.legal-main h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  margin-bottom: 24px;
+}
+
+.legal-block {
+  border-top: 1px solid var(--line);
+  padding: 18px 0;
+  max-width: 74ch;
+}
+
+.legal-block h2 {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-bottom: 10px;
+}
+
+.legal-block p {
+  margin: 0;
+}
+
+.legal-footer {
+  margin-top: 0;
+  padding-top: 18px;
+}
+
+.legal-links a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @media (max-width: 980px) {
   .hero {
     grid-template-columns: 1fr;
@@ -490,6 +525,10 @@ h2 {
 
   .reference-grid {
     grid-template-columns: 1fr;
+  }
+
+  .legal-main {
+    min-height: auto;
   }
 }
 
