@@ -141,39 +141,13 @@ h2 {
 .scroll-hint {
   color: var(--ink);
   text-decoration: none;
-  display: grid;
-  justify-items: center;
-  gap: 8px;
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  display: inline-flex;
 }
 
-.arrow-down {
-  width: 2px;
-  height: 72px;
-  background: var(--line);
-  position: relative;
-}
-
-.arrow-down::after,
-.arrow-down::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  width: 12px;
-  height: 2px;
-  background: var(--line);
-}
-
-.arrow-down::before {
-  left: -10px;
-  transform: rotate(42deg);
-}
-
-.arrow-down::after {
-  right: -10px;
-  transform: rotate(-42deg);
+.scroll-hint img {
+  width: 96px;
+  height: auto;
+  display: block;
 }
 
 .about {
