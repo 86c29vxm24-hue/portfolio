@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Overpass";
+  src: url("assets/Overpass/Overpass-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url("assets/Syne/Syne-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+
 :root {
   --bg-paper: #f5f3eb;
   --ink: #101010;
@@ -22,7 +38,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--bg-paper);
-  font-family: "Chakra Petch", "Avenir Next", "Segoe UI", sans-serif;
+  font-family: "Overpass", "Avenir Next", "Segoe UI", sans-serif;
   line-height: 1.35;
 }
 
@@ -38,7 +54,10 @@ main {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-family: "Syne", "Arial Black", sans-serif;
   letter-spacing: -0.03em;
   margin: 0;
@@ -67,7 +86,6 @@ h2 {
 }
 
 .logo {
-  font-family: "Syne", sans-serif;
   font-weight: 800;
   letter-spacing: -0.04em;
   text-decoration: none;
@@ -638,7 +656,6 @@ h2 {
 }
 
 .project-count {
-  font-family: "Syne", sans-serif;
   font-size: clamp(1.6rem, 3.8vw, 2.4rem);
 }
 
@@ -667,7 +684,6 @@ h2 {
 
 .quote-mark {
   margin: 0 0 2px;
-  font-family: "Syne", sans-serif;
   font-size: 1.9rem;
   line-height: 1;
 }
