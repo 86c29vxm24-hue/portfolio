@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Frontend Developer</title>
+  <title data-i18n="page_title_index">Portfolio | Frontend Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
@@ -19,7 +19,7 @@
           <span>/</span>
           <button class="lang-btn" type="button" data-lang="en" aria-label="English">EN</button>
         </div>
-        <button class="menu-btn" type="button" aria-label="Menue">
+        <button class="menu-btn" type="button" aria-label="Menue" data-i18n-aria="aria_menu">
           <span></span>
           <span></span>
           <span></span>
@@ -41,7 +41,7 @@
           <p class="accent">Fatih Yalcin</p>
         </div>
       </div>
-      <a class="scroll-hint" href="#about" aria-label="Zu About springen">
+      <a class="scroll-hint" href="#about" aria-label="Zu About springen" data-i18n-aria="aria_scroll_about">
         <img src="img/icons/scroll-down.svg" alt="" />
       </a>
     </section>
@@ -69,9 +69,9 @@
           <span class="visually-hidden" data-i18n="lets_talk">Let&apos;s talk</span>
         </a>
       </div>
-      <div class="about-photo" role="img" aria-label="Dein Profilfoto">
+      <div class="about-photo" role="img" aria-label="Dein Profilfoto" data-i18n-aria="aria_about_photo">
         <div class="photo-placeholder">
-          <span>Profilfoto folgt</span>
+          <span data-i18n="profile_placeholder">Profilfoto folgt</span>
         </div>
       </div>
     </section>
@@ -133,7 +133,7 @@
     </div>
 
     <section class="portfolio section" id="portfolio">
-      <h2>Portfolio</h2>
+      <h2 data-i18n="portfolio_title">Portfolio</h2>
       <p class="section-lead" data-i18n="portfolio_lead">Eine Auswahl meiner Projekte mit Fokus auf Frontend-Umsetzung und UX.</p>
 
       <div class="project-row">
@@ -180,28 +180,28 @@
           <p class="quote-mark">"</p>
           <h3>V. Schwartz</h3>
           <p>
-            "Zuverlaessig, stark in der Umsetzung und mit gutem Blick fuer Details. Die Kommunikation war jederzeit klar."
+            <span data-i18n="quote_1">"Zuverlaessig, stark in der Umsetzung und mit gutem Blick fuer Details. Die Kommunikation war jederzeit klar."</span>
           </p>
         </article>
         <article>
           <p class="quote-mark">"</p>
           <h3>E. Fischer</h3>
           <p>
-            "Sehr strukturierte Arbeitsweise. Probleme wurden frueh erkannt und sauber geloest, ohne den Zeitplan zu riskieren."
+            <span data-i18n="quote_2">"Sehr strukturierte Arbeitsweise. Probleme wurden frueh erkannt und sauber geloest, ohne den Zeitplan zu riskieren."</span>
           </p>
         </article>
         <article>
           <p class="quote-mark">"</p>
           <h3>L. Huber</h3>
           <p>
-            "Hat Verantwortung uebernommen und Features von Idee bis Deployment solide begleitet."
+            <span data-i18n="quote_3">"Hat Verantwortung uebernommen und Features von Idee bis Deployment solide begleitet."</span>
           </p>
         </article>
       </div>
     </section>
 
     <section class="contact section" id="contact">
-      <h2>Say Hi!</h2>
+      <h2 data-i18n="contact_title">Say Hi!</h2>
       <p class="contact-lead" data-i18n="contact_lead">Du suchst Unterstuetzung fuer ein Frontend-Projekt? Schreib mir.</p>
       <form class="contact-form" id="contact-form" novalidate>
         <label>
@@ -230,21 +230,21 @@
       <footer class="contact-footer">
         <p>[FY] &copy; 2026</p>
         <div class="socials">
-          <a class="social-icon" href="#" aria-label="GitHub">
+          <a class="social-icon" href="#" aria-label="GitHub" data-i18n-aria="aria_social_github">
             <img src="img/icons/github-button.svg" alt="" />
           </a>
-          <a class="social-icon" href="#" aria-label="Email">
+          <a class="social-icon" href="#" aria-label="Email" data-i18n-aria="aria_social_email">
             <img src="img/icons/email-button.svg" alt="" />
           </a>
-          <a class="social-icon" href="#" aria-label="LinkedIn">
+          <a class="social-icon" href="#" aria-label="LinkedIn" data-i18n-aria="aria_social_linkedin">
             <img src="img/icons/linkedin-button.svg" alt="" />
           </a>
         </div>
       </footer>
       <nav class="legal-mini" aria-label="Rechtliches">
-        <a href="impressum.html">Impressum</a>
+        <a href="impressum.html" data-i18n="legal_imprint">Impressum</a>
         <span>|</span>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="datenschutz.html" data-i18n="legal_privacy">Datenschutz</a>
       </nav>
     </section>
   </main>
