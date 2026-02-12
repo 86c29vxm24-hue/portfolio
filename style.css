@@ -666,7 +666,7 @@ h2 {
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 30px;
-  margin: 0 0 72px;
+  margin: 0 0 116px;
 }
 
 .project-row.reverse {
@@ -704,13 +704,14 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  padding-inline: 8%;
+  box-sizing: border-box;
 }
 
 .project-preview-image img {
-  width: 70%;
-  max-width: 420px;
+  width: 78%;
+  max-width: 500px;
   height: auto;
-  margin-left: 2%;
 }
 
 .project-preview-image-right {
@@ -718,8 +719,7 @@ h2 {
 }
 
 .project-preview-image-right img {
-  margin-left: 0;
-  margin-right: 2%;
+  margin: 0;
 }
 
 .project-count-top {
