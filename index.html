@@ -156,17 +156,25 @@
         <label>
           Dein Name
           <input type="text" name="name" required minlength="2" />
+          <span class="field-error" data-error-for="name" aria-live="polite"></span>
         </label>
         <label>
           Deine E-Mail
           <input type="email" name="email" required />
+          <span class="field-error" data-error-for="email" aria-live="polite"></span>
         </label>
         <label>
           Deine Nachricht
           <textarea name="message" rows="4" required minlength="10"></textarea>
+          <span class="field-error" data-error-for="message" aria-live="polite"></span>
         </label>
+        <label class="privacy-row">
+          <input type="checkbox" name="privacy" required />
+          <span>Ich habe die Datenschutzerklaerung gelesen und stimme zu.</span>
+        </label>
+        <span class="field-error" data-error-for="privacy" aria-live="polite"></span>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        <button class="outline-btn" type="submit">Send message</button>
+        <button class="outline-btn" type="submit" disabled>Send message</button>
       </form>
       <footer class="contact-footer">
         <p>[SE] &copy; 2026</p>

@@ -382,6 +382,19 @@ h2 {
   font-size: 0.95rem;
 }
 
+.privacy-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.privacy-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: var(--accent);
+}
+
 .contact-form input,
 .contact-form textarea {
   background: transparent;
@@ -396,6 +409,12 @@ h2 {
 .contact-form textarea:focus {
   outline: none;
   border-bottom-color: var(--accent);
+}
+
+.field-error {
+  min-height: 1.2em;
+  font-size: 0.82rem;
+  color: #ff7272;
 }
 
 .form-status {
@@ -416,6 +435,11 @@ h2 {
   color: #f5f5f5;
   border-color: #f5f5f5;
   width: fit-content;
+}
+
+.contact .outline-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
 
 .contact-footer {
