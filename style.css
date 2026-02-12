@@ -32,7 +32,7 @@ main {
 .section {
   width: min(100%, var(--max-width));
   margin: 0 auto;
-  padding: 96px 24px;
+  padding: 76px 24px;
 }
 
 h1,
@@ -104,6 +104,8 @@ h2 {
   grid-template-columns: 1fr auto;
   position: relative;
   align-items: center;
+  padding-top: 52px;
+  padding-bottom: 56px;
 }
 
 .hero-side {
@@ -480,7 +482,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   margin-top: 36px;
-  padding-bottom: 28px;
+  padding-bottom: 10px;
 }
 
 .socials {
@@ -506,6 +508,22 @@ h2 {
   width: 18px;
   height: 18px;
   display: block;
+}
+
+.legal-mini {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+  padding: 0 24px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #c9c9c9;
+  font-size: 0.72rem;
+}
+
+.legal-mini a {
+  color: #c9c9c9;
+  text-decoration: none;
 }
 
 .legal-main {
