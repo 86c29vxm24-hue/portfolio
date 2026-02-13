@@ -19,8 +19,8 @@
   --ink: #101010;
   --ink-muted: #2f2f2f;
   --line: #151515;
-  --accent: #00d8b0;
-  --contact-accent: #00bc8f;
+  --accent: #00BC8F;
+  --contact-accent: #00BC8F;
   --night: #030303;
   --panel: #faf9f4;
   --max-width: 1440px;
@@ -547,7 +547,7 @@ h2 {
 
 .skills-bottom-contact:hover,
 .skills-bottom-contact:focus-visible {
-  color: #17c89a;
+  color: var(--contact-accent);
   font-weight: 700;
 }
 
