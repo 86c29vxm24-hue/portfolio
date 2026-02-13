@@ -67,6 +67,7 @@ const translations = {
     legal_privacy_label: "Datenschutz",
     legal_home: "Home",
     imprint_h1: "Impressum",
+    imprint_h1_html: "Impressum",
     imprint_section_1_title: "Angaben gemaess Paragraph 5 TMG",
     imprint_section_1_body_html: "Fatih Yalcin<br />Nagelschmiedgasse 24b<br />50827 Köln<br />Deutschland",
     imprint_section_2_title: "Kontakt",
@@ -77,6 +78,7 @@ const translations = {
     imprint_section_4_body:
       "Trotz sorgfaeltiger inhaltlicher Kontrolle uebernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
     privacy_h1: "Datenschutzerklaerung",
+    privacy_h1_html: "Datenschutz-<br />erklaerung",
     privacy_section_1_title: "1. Allgemeine Hinweise",
     privacy_section_1_body:
       "Der Schutz deiner persoenlichen Daten ist wichtig. Diese Webseite verarbeitet nur die Daten, die fuer den Betrieb und die Kontaktaufnahme erforderlich sind.",
@@ -158,6 +160,7 @@ const translations = {
     legal_privacy_label: "Privacy policy",
     legal_home: "Home",
     imprint_h1: "Legal Notice",
+    imprint_h1_html: "Legal<br />Notice",
     imprint_section_1_title: "Information according to Section 5 TMG",
     imprint_section_1_body_html: "Fatih Yalcin<br />Nagelschmiedgasse 24b<br />50827 Köln<br />Germany",
     imprint_section_2_title: "Contact",
@@ -168,6 +171,7 @@ const translations = {
     imprint_section_4_body:
       "Despite careful content control, we assume no liability for the content of external links. The operators of linked pages are solely responsible for their content.",
     privacy_h1: "Privacy Policy",
+    privacy_h1_html: "Privacy<br />Policy",
     privacy_section_1_title: "1. General information",
     privacy_section_1_body:
       "Protecting your personal data is important. This website only processes data required for operation and contact requests.",

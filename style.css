@@ -1315,7 +1315,7 @@ body.menu-open .site-menu {
 .legal-main > h1,
 .legal-main > .legal-block {
   width: min(100%, 700px);
-  margin-inline: auto;
+  margin-inline: 0;
 }
 
 .legal-main h1 {
