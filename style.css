@@ -185,12 +185,31 @@ h2 {
   width: 40px;
   height: 4px;
   background: var(--line);
+  transform-origin: center;
   transition: transform 180ms ease, opacity 180ms ease;
 }
 
 .menu-btn span:first-child,
 .menu-btn span:last-child {
   width: 20px;
+}
+
+body.menu-open .menu-btn span:first-child,
+body.menu-open .menu-btn span:last-child {
+  width: 40px;
+}
+
+body.menu-open .menu-btn span:first-child {
+  transform: translateY(13px) rotate(45deg);
+}
+
+body.menu-open .menu-btn span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+body.menu-open .menu-btn span:last-child {
+  transform: translateY(-13px) rotate(-45deg);
 }
 
 .site-menu {
