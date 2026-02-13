@@ -973,10 +973,36 @@ h2 {
   font-size: 0.95rem;
 }
 
-.privacy-row {
+.contact-form label.privacy-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
+  flex-wrap: nowrap;
+  margin-top: 2px;
+}
+
+.contact-form label.privacy-row > span {
+  min-width: 0;
+  line-height: 1.35;
+}
+
+.privacy-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.privacy-link:hover,
+.privacy-link:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.privacy-link:focus-visible {
+  outline: none;
+}
+
+.contact-form label.privacy-row input[type="checkbox"] {
+  flex: 0 0 auto;
 }
 
 .privacy-row input[type="checkbox"] {
@@ -984,34 +1010,38 @@ h2 {
   appearance: none;
   width: 18px;
   height: 18px;
-  margin-top: 2px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   border: 1.5px solid #f5f5f5;
   background: var(--night);
   display: grid;
   place-items: center;
   cursor: pointer;
+  border-radius: 0;
+  overflow: hidden;
 }
 
 .privacy-row input[type="checkbox"]::before {
   content: "";
-  width: 11px;
-  height: 11px;
-  clip-path: polygon(14% 53%, 0 67%, 43% 100%, 100% 21%, 84% 8%, 43% 74%);
-  background: #f5f5f5;
-  transform: scale(0);
+  width: 4px;
+  height: 8px;
+  border-right: 1.8px solid #f5f5f5;
+  border-bottom: 1.8px solid #f5f5f5;
+  transform: translateY(-0.4px) rotate(45deg) scale(0);
+  transform-origin: center;
   transition: transform 120ms ease-in-out;
 }
 
 .privacy-row input[type="checkbox"]:checked::before {
-  transform: scale(1);
+  transform: translateY(-0.4px) rotate(45deg) scale(1);
 }
 
 .privacy-row input[type="checkbox"]:focus-visible {
-  outline: 2px solid #f5f5f5;
-  outline-offset: 2px;
+  outline: none;
 }
 
-.contact-form input,
+.contact-form input:not([type="checkbox"]),
 .contact-form textarea {
   background: transparent;
   border: 0;
@@ -1021,10 +1051,16 @@ h2 {
   padding: 8px 2px;
 }
 
-.contact-form input:focus,
+.contact-form input:not([type="checkbox"]):focus,
 .contact-form textarea:focus {
   outline: none;
   border-bottom-color: var(--accent);
+}
+
+.privacy-row {
+  /* legacy selector kept for compatibility with existing markup hooks */
+  align-items: center;
+  gap: 10px;
 }
 
 .field-error {

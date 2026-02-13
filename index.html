@@ -254,7 +254,9 @@
         </label>
         <label class="privacy-row">
           <input type="checkbox" name="privacy" required />
-          <span data-i18n="privacy_text">Ich habe die Datenschutzerklaerung gelesen und stimme zu.</span>
+          <span data-i18n-html="privacy_text_html">
+            Ich habe die <a class="privacy-link" href="datenschutz.html">Datenschutzerklaerung</a> gelesen und stimme zu.
+          </span>
         </label>
         <span class="field-error" data-error-for="privacy" aria-live="polite"></span>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>

@@ -45,6 +45,8 @@ const translations = {
     label_email: "Deine E-Mail",
     label_message: "Deine Nachricht",
     privacy_text: "Ich habe die Datenschutzerklaerung gelesen und stimme zu.",
+    privacy_text_html:
+      "Ich habe die <a class=\"privacy-link\" href=\"datenschutz.html\">Datenschutzerklaerung</a> gelesen und stimme zu.",
     send_message: "Nachricht senden",
     error_name: "Bitte gib einen gueltigen Namen ein.",
     error_email: "Bitte gib eine gueltige E-Mail-Adresse ein.",
@@ -130,6 +132,8 @@ const translations = {
     label_email: "Your e-mail",
     label_message: "Your message",
     privacy_text: "I have read the privacy policy and agree.",
+    privacy_text_html:
+      "I have read the <a class=\"privacy-link\" href=\"datenschutz.html\">privacy policy</a> and agree to the processing of my data as outlined.",
     send_message: "Send message",
     error_name: "Please enter a valid name.",
     error_email: "Please enter a valid e-mail address.",
