@@ -222,9 +222,14 @@ h2 {
 }
 
 .hero h1 {
-  font-size: clamp(3.4rem, 9vw, 7.3rem);
-  line-height: 0.86;
+  font-family: "Syne", "Arial Black", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 128px;
+  line-height: 1;
+  letter-spacing: -0.025em;
   text-align: center;
+  vertical-align: middle;
 }
 
 .hero-meta {
@@ -235,16 +240,25 @@ h2 {
 }
 
 .hero-line {
-  width: clamp(260px, 42vw, 510px);
-  height: 2px;
-  background: var(--line);
+  width: 673px;
+  height: 0;
+  border-top: 3px solid var(--line);
+  opacity: 1;
+  background: transparent;
+  margin-left: -22px;
 }
 
 .accent {
   margin: 0;
   color: var(--accent);
-  font-size: clamp(1rem, 2vw, 1.9rem);
-  font-weight: 500;
+  font-family: "Overpass", "Avenir Next", "Segoe UI", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .scroll-hint {
@@ -1117,6 +1131,10 @@ h2 {
     align-items: flex-start;
   }
 
+  .hero h1 {
+    font-size: clamp(3.8rem, 12vw, 6.2rem);
+  }
+
   .hero-side {
     display: none;
   }
@@ -1216,6 +1234,10 @@ h2 {
 
   .hero-line {
     width: 54vw;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.6rem);
   }
 
   .project-row,
