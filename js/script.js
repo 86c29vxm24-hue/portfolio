@@ -325,8 +325,57 @@ if (toTopButton) {
 }
 
 const portfolioRows = Array.from(document.querySelectorAll(".project-row"));
-const mobileProjectsQuery = window.matchMedia("(max-width: 980px)");
+const mobileProjectsQuery = window.matchMedia("(max-width: 680px)");
+const tabletProjectsQuery = window.matchMedia("(min-width: 681px) and (max-width: 980px)");
 let portfolioScrollObserver = null;
+
+const syncPortfolioRowExpandedState = () => {
+  portfolioRows.forEach((row) => {
+    const trigger = row.querySelector(".project-card-image");
+    if (!trigger) {
+      return;
+    }
+    trigger.setAttribute("aria-expanded", String(row.classList.contains("is-open")));
+  });
+};
+
+const setOpenPortfolioRow = (rowToOpen) => {
+  portfolioRows.forEach((row) => {
+    row.classList.toggle("is-open", row === rowToOpen);
+  });
+  syncPortfolioRowExpandedState();
+};
+
+const bindPortfolioRowTriggers = () => {
+  portfolioRows.forEach((row) => {
+    const trigger = row.querySelector(".project-card-image");
+    if (!trigger || trigger.dataset.toggleBound === "true") {
+      return;
+    }
+
+    trigger.dataset.toggleBound = "true";
+    trigger.setAttribute("role", "button");
+    trigger.setAttribute("tabindex", "0");
+    trigger.setAttribute("aria-expanded", "false");
+
+    const toggleRow = () => {
+      if (!tabletProjectsQuery.matches) {
+        return;
+      }
+      const shouldOpen = !row.classList.contains("is-open");
+      setOpenPortfolioRow(shouldOpen ? row : null);
+    };
+
+    trigger.addEventListener("click", toggleRow);
+    trigger.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") {
+        return;
+      }
+      event.preventDefault();
+      toggleRow();
+    });
+  });
+};
 
 const setupPortfolioScrollReveal = () => {
   if (!portfolioRows.length) {
@@ -339,8 +388,9 @@ const setupPortfolioScrollReveal = () => {
   }
 
   portfolioRows.forEach((row) => {
-    row.classList.remove("is-inview");
+    row.classList.remove("is-inview", "is-open");
   });
+  syncPortfolioRowExpandedState();
 
   if (!mobileProjectsQuery.matches) {
     return;
@@ -371,10 +421,18 @@ const setupPortfolioScrollReveal = () => {
 };
 
 if (portfolioRows.length) {
+  bindPortfolioRowTriggers();
   setupPortfolioScrollReveal();
+
+  const handlePortfolioViewportChange = () => {
+    setupPortfolioScrollReveal();
+  };
+
   if (typeof mobileProjectsQuery.addEventListener === "function") {
-    mobileProjectsQuery.addEventListener("change", setupPortfolioScrollReveal);
+    mobileProjectsQuery.addEventListener("change", handlePortfolioViewportChange);
+    tabletProjectsQuery.addEventListener("change", handlePortfolioViewportChange);
   } else if (typeof mobileProjectsQuery.addListener === "function") {
-    mobileProjectsQuery.addListener(setupPortfolioScrollReveal);
+    mobileProjectsQuery.addListener(handlePortfolioViewportChange);
+    tabletProjectsQuery.addListener(handlePortfolioViewportChange);
   }
 }

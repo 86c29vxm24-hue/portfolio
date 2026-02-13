@@ -316,6 +316,34 @@
     right: 22px;
     bottom: 42px;
   }
+
+  .project-row .project-card-image {
+    cursor: pointer;
+  }
+
+  .project-row .project-card-image:focus-visible {
+    outline: 2px solid var(--line);
+    outline-offset: 4px;
+  }
+
+  .project-row.is-open .project-hover-info {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+    transition-delay: 0ms;
+  }
+
+  .project-row.is-open .project-main-image {
+    filter: grayscale(0%);
+    transform: scale(1);
+  }
+
+  .project-row.is-open .project-image-frame::after {
+    opacity: 1;
+    transform: translate(var(--project-frame-x), var(--project-frame-offset));
+  }
 }
 
 @media (max-width: 680px) {
