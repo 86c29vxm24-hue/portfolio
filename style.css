@@ -67,6 +67,15 @@ h2 {
   font-size: clamp(2.1rem, 5.2vw, 4rem);
 }
 
+.section h2 {
+  transition: color 160ms ease;
+}
+
+.section h2:hover {
+  color: var(--accent);
+  cursor: pointer;
+}
+
 .topbar {
   width: 100%;
   padding: 0 24px;
