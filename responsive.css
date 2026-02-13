@@ -18,8 +18,9 @@
 
   .hero {
     display: block;
-    gap: 24px;
-    min-height: 100vh;
+    min-height: 530px;
+    padding-top: 18px;
+    padding-bottom: 24px;
   }
 
   .hero-content {
@@ -29,17 +30,52 @@
   }
 
   .hero h1 {
-    font-size: clamp(3.8rem, 12vw, 6.2rem);
+    font-size: clamp(3.7rem, 10vw, 5.4rem);
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  .hero-meta {
+    margin-top: 10px;
+    width: min(100%, 356px);
+    display: grid;
+    grid-template-columns: minmax(132px, 180px) auto;
+    align-items: end;
+    gap: 12px;
+  }
+
+  .hero-line {
+    width: 100%;
+  }
+
+  .accent {
+    font-size: clamp(2rem, 4.6vw, 2.95rem);
+    text-align: right;
   }
 
   .hero-side {
-    display: none;
+    display: inline-flex;
+    top: auto;
+    left: 18px;
+    bottom: 68px;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    font-size: clamp(0.92rem, 1.55vw, 1.12rem);
+    letter-spacing: 0.02em;
   }
 
   .scroll-hint {
-    position: static;
+    position: absolute;
+    top: auto;
+    right: 20px;
+    bottom: 18px;
     transform: none;
-    margin-top: 20px;
+    margin-top: 0;
+  }
+
+  .scroll-hint img {
+    width: 92px;
   }
 
   .about {
@@ -288,11 +324,43 @@
   }
 
   .hero-line {
-    width: 54vw;
+    width: 100%;
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 14vw, 4.6rem);
+    font-size: clamp(3.08rem, 13.2vw, 4.35rem);
+    line-height: 0.93;
+  }
+
+  .hero {
+    min-height: 508px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+
+  .hero-meta {
+    width: min(100%, 350px);
+    grid-template-columns: minmax(116px, 180px) auto;
+    gap: 10px;
+  }
+
+  .accent {
+    font-size: clamp(1.75rem, 7.4vw, 2.35rem);
+  }
+
+  .hero-side {
+    left: 12px;
+    bottom: 66px;
+    font-size: 0.98rem;
+  }
+
+  .scroll-hint {
+    right: 12px;
+    bottom: 10px;
+  }
+
+  .scroll-hint img {
+    width: 84px;
   }
 
   .project-row,
