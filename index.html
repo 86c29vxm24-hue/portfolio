@@ -16,7 +16,14 @@
           <span>/</span>
           <button class="lang-btn" type="button" data-lang="en" aria-label="English">EN</button>
         </div>
-        <button class="menu-btn" type="button" aria-label="Menue" data-i18n-aria="aria_menu">
+        <button
+          class="menu-btn"
+          type="button"
+          aria-label="Menue"
+          data-i18n-aria="aria_menu"
+          aria-expanded="false"
+          aria-controls="site-menu"
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -24,6 +31,20 @@
       </div>
     </div>
   </header>
+
+  <div class="site-menu" id="site-menu" aria-hidden="true">
+    <nav class="site-menu-nav" aria-label="Hauptnavigation" data-i18n-aria="menu_nav_aria">
+      <a class="site-menu-link" href="#about">
+        <span data-i18n="about_title">About me</span>
+      </a>
+      <a class="site-menu-link" href="#skills">
+        <span data-i18n="menu_skills">My skills</span>
+      </a>
+      <a class="site-menu-link" href="#portfolio">
+        <span data-i18n="portfolio_title">Portfolio</span>
+      </a>
+    </nav>
+  </div>
   
   <main>
     <section class="hero section">

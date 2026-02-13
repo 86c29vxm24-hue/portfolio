@@ -1,6 +1,44 @@
 const form = document.getElementById("contact-form");
 const statusEl = document.getElementById("form-status");
 const translate = window.t || ((key) => key);
+const menuButton = document.querySelector(".menu-btn");
+const siteMenu = document.getElementById("site-menu");
+
+const setMenuOpen = (isOpen) => {
+  if (!menuButton || !siteMenu) {
+    return;
+  }
+  document.body.classList.toggle("menu-open", isOpen);
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  siteMenu.setAttribute("aria-hidden", String(!isOpen));
+};
+
+if (menuButton && siteMenu) {
+  const menuLinks = siteMenu.querySelectorAll(".site-menu-link");
+
+  menuButton.addEventListener("click", () => {
+    const shouldOpen = !document.body.classList.contains("menu-open");
+    setMenuOpen(shouldOpen);
+  });
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      setMenuOpen(false);
+    });
+  });
+
+  siteMenu.addEventListener("click", (event) => {
+    if (event.target === siteMenu) {
+      setMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && document.body.classList.contains("menu-open")) {
+      setMenuOpen(false);
+    }
+  });
+}
 
 if (form && statusEl) {
   const nameInput = form.elements.namedItem("name");
