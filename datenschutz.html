@@ -6,7 +6,7 @@
   <title data-i18n="page_title_privacy">Datenschutz | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="legal-page">
   <header class="topbar" id="home">
     <div class="topbar-inner">
       <a class="logo" href="index.html" aria-label="Zur Startseite">[FY]</a>
@@ -75,12 +75,25 @@
     </section>
   </main>
 
-  <footer class="contact section legal-footer">
-    <div class="contact-footer">
-      <p>[FY] &copy; 2026</p>
-      <div class="socials legal-links">
-        <a href="index.html" data-i18n="legal_home">Home</a>
-        <a href="impressum.html" data-i18n="legal_imprint">Impressum</a>
+  <footer class="legal-page-footer">
+    <div class="legal-page-footer-inner">
+      <div class="legal-footer-brand">
+        <p class="legal-footer-logo">[FY]</p>
+        <p class="legal-footer-copy">&copy; Fatih Yalcin 2026</p>
+      </div>
+      <div class="legal-footer-right">
+        <div class="socials legal-socials">
+          <a class="social-icon" href="#" aria-label="GitHub" data-i18n-aria="aria_social_github">
+            <img src="img/icons/github-button.svg" alt="" />
+          </a>
+          <a class="social-icon" href="#" aria-label="Email" data-i18n-aria="aria_social_email">
+            <img src="img/icons/email-button.svg" alt="" />
+          </a>
+          <a class="social-icon" href="#" aria-label="LinkedIn" data-i18n-aria="aria_social_linkedin">
+            <img src="img/icons/linkedin-button.svg" alt="" />
+          </a>
+        </div>
+        <p class="legal-page-label" data-i18n="legal_privacy_label">Privacy policy</p>
       </div>
     </div>
   </footer>
