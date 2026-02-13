@@ -18,31 +18,34 @@
 
   .hero {
     display: block;
-    min-height: 530px;
+    min-height: max(530px, calc(100svh - 22px));
     padding-top: 18px;
     padding-bottom: 24px;
   }
 
   .hero-content {
-    width: 100%;
+    width: min(100%, 360px);
     transform: none;
     align-items: flex-start;
   }
 
   .hero h1 {
-    font-size: clamp(3.7rem, 10vw, 5.4rem);
+    font-size: clamp(3.35rem, 9.2vw, 4.9rem);
     line-height: 0.92;
     letter-spacing: -0.02em;
     text-align: left;
+    max-width: 100%;
   }
 
   .hero-meta {
-    margin-top: 10px;
-    width: min(100%, 356px);
+    margin-top: 6px;
+    width: fit-content;
+    max-width: 100%;
     display: grid;
-    grid-template-columns: minmax(132px, 180px) auto;
-    align-items: end;
-    gap: 12px;
+    grid-template-columns: minmax(132px, 170px) auto;
+    justify-content: start;
+    align-items: center;
+    gap: 6px;
   }
 
   .hero-line {
@@ -57,12 +60,13 @@
   .hero-side {
     display: inline-flex;
     top: auto;
-    left: 18px;
-    bottom: 68px;
+    left: 24px;
+    bottom: 70px;
     transform: rotate(-90deg);
-    transform-origin: left bottom;
+    transform-origin: left top;
     font-size: clamp(0.92rem, 1.55vw, 1.12rem);
     letter-spacing: 0.02em;
+    white-space: nowrap;
   }
 
   .scroll-hint {
@@ -328,20 +332,25 @@
   }
 
   .hero h1 {
-    font-size: clamp(3.08rem, 13.2vw, 4.35rem);
+    font-size: clamp(2.7rem, 11.1vw, 3.9rem);
     line-height: 0.93;
+    letter-spacing: -0.018em;
   }
 
   .hero {
-    min-height: 508px;
+    min-height: max(508px, calc(100svh - 18px));
     padding-top: 8px;
     padding-bottom: 16px;
+    padding-inline: 12px;
   }
 
   .hero-meta {
-    width: min(100%, 350px);
-    grid-template-columns: minmax(116px, 180px) auto;
-    gap: 10px;
+    width: fit-content;
+    max-width: 100%;
+    grid-template-columns: minmax(110px, 162px) auto;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
   }
 
   .accent {
@@ -349,14 +358,14 @@
   }
 
   .hero-side {
-    left: 12px;
+    left: 20px;
     bottom: 66px;
     font-size: 0.98rem;
   }
 
   .scroll-hint {
     right: 12px;
-    bottom: 10px;
+    bottom: 34px;
   }
 
   .scroll-hint img {
