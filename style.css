@@ -740,6 +740,13 @@ h2 {
   width: 100%;
   height: auto;
   display: block;
+  filter: grayscale(100%);
+  transition: filter 220ms ease;
+}
+
+.project-card-image:hover .project-preview-image img,
+.project-card-image:focus-visible .project-preview-image img {
+  filter: grayscale(0%);
 }
 
 .project-preview-image-right {
