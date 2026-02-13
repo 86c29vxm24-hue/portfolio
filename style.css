@@ -413,9 +413,9 @@ h2 {
 
 .section-arrow {
   width: min(100%, var(--max-width));
-  margin: -14px auto -10px;
+  margin: -2px auto -14px;
   padding: 0 24px;
-  height: 88px;
+  height: 108px;
   display: flex;
   align-items: flex-start;
 }
@@ -428,8 +428,8 @@ h2 {
 
 .section-arrow-icon {
   position: relative;
-  width: 92px;
-  height: 92px;
+  width: 112px;
+  height: 112px;
   display: block;
   background: var(--ink);
   -webkit-mask: url("img/icons/arrow 3.svg") center / contain no-repeat;
@@ -444,7 +444,7 @@ h2 {
   background: inherit;
   -webkit-mask: inherit;
   mask: inherit;
-  transform: translateX(0.9px);
+  transform: translateX(1.7px);
 }
 
 .section-arrow-right {
@@ -456,18 +456,7 @@ h2 {
 }
 
 .about-arrow {
-  margin-top: -2px;
-  margin-bottom: -14px;
-  height: 108px;
-}
-
-.about-arrow .section-arrow-icon {
-  width: 112px;
-  height: 112px;
-}
-
-.about-arrow .section-arrow-icon::before {
-  transform: translateX(1.7px);
+  padding-right: 74px;
 }
 
 .section-arrow-link:hover .section-arrow-icon,
@@ -1025,6 +1014,10 @@ h2 {
   .section-arrow-icon {
     width: 56px;
     height: 56px;
+  }
+
+  .about-arrow {
+    padding-right: 24px;
   }
 
   .skills-frame {
