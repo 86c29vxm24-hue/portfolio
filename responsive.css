@@ -296,6 +296,28 @@
   }
 }
 
+@media (min-width: 681px) and (max-width: 980px) {
+  .hero {
+    display: grid;
+    place-items: center;
+    min-height: max(620px, calc(100svh - 22px));
+  }
+
+  .hero-content {
+    width: min(100%, 560px);
+    margin: 0 auto;
+  }
+
+  .hero-side {
+    bottom: 104px;
+  }
+
+  .scroll-hint {
+    right: 22px;
+    bottom: 42px;
+  }
+}
+
 @media (max-width: 680px) {
   .section {
     padding: 56px 16px;
