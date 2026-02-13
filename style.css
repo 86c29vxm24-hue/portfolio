@@ -816,12 +816,25 @@ h2 {
 .project-github-link {
   display: inline-block;
   line-height: 0;
+  transition: transform 110ms ease;
+  transform-origin: center;
 }
 
 .project-github-link img {
   width: min(220px, 100%);
   height: auto;
   display: block;
+  transition: filter 110ms ease;
+}
+
+.project-github-link:hover,
+.project-github-link:focus-visible {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.project-github-link:hover img,
+.project-github-link:focus-visible img {
+  filter: brightness(1.03) drop-shadow(0 8px 18px rgba(0, 0, 0, 0.16));
 }
 
 .project-row:hover .project-hover-info,
