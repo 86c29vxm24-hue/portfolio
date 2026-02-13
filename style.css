@@ -664,6 +664,7 @@ h2 {
 }
 
 .project-row {
+  --project-info-slide: -42px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(260px, 350px) auto;
   align-items: center;
@@ -672,6 +673,7 @@ h2 {
 }
 
 .project-row.reverse {
+  --project-info-slide: 42px;
   grid-template-columns: auto minmax(260px, 350px) minmax(0, 1fr);
 }
 
@@ -688,6 +690,8 @@ h2 {
 .project-card-image {
   border: 0;
   background: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .project-image-frame {
@@ -778,9 +782,16 @@ h2 {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(10px);
-  transition: opacity 180ms ease, transform 200ms ease, visibility 0ms linear 200ms;
+  transform: translateX(var(--project-info-slide));
+  clip-path: inset(0 100% 0 0);
+  transition: opacity 180ms ease, transform 240ms ease, clip-path 280ms ease, visibility 0ms linear 280ms;
   align-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.project-row.reverse .project-hover-info {
+  clip-path: inset(0 0 0 100%);
 }
 
 .project-hover-info h3 {
@@ -818,7 +829,8 @@ h2 {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateY(0);
+  transform: translateX(0);
+  clip-path: inset(0 0 0 0);
   transition-delay: 0ms;
 }
 
