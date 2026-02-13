@@ -1,0 +1,284 @@
+@media (max-width: 980px) {
+  .section {
+    padding: 72px 20px;
+  }
+
+  .site-menu-nav {
+    padding: 102px 20px 70px;
+    justify-content: stretch;
+    gap: 18px;
+  }
+
+  .site-menu-link {
+    min-height: 124px;
+    width: 100%;
+    padding: 24px 20px 28px 38px;
+    font-size: clamp(2.5rem, 8.2vw, 4rem);
+  }
+
+  .hero {
+    display: block;
+    gap: 24px;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    width: 100%;
+    transform: none;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.8rem, 12vw, 6.2rem);
+  }
+
+  .hero-side {
+    display: none;
+  }
+
+  .scroll-hint {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "copy"
+      "photo";
+    gap: 22px;
+  }
+
+  .about-photo-img {
+    width: 100%;
+  }
+
+  .about-photo {
+    --about-frame-offset: 10px;
+    justify-self: start;
+    transform: none;
+    width: min(100%, 360px);
+  }
+
+  .about-photo::after {
+    inset: 0;
+    border-width: 2px;
+  }
+
+  .about .primary-btn {
+    margin-left: 0;
+  }
+
+  .project-row {
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    margin: 0 0 96px;
+  }
+
+  .project-row.reverse {
+    grid-template-columns: auto 1fr;
+  }
+
+  .project-hover-info,
+  .project-hover-arrow {
+    display: none;
+  }
+
+  .reference-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-arrow {
+    height: 60px;
+    margin: -10px auto -6px;
+  }
+
+  .section-arrow-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .about-arrow {
+    padding-right: 24px;
+  }
+
+  .skills-frame {
+    padding: 66px 26px 70px;
+    border-width: 3px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 28px 18px;
+    margin-bottom: 56px;
+  }
+
+  .skills-bottom-copy {
+    font-size: clamp(0.85rem, 1.6vw, 1rem);
+  }
+
+  .legal-main {
+    min-height: auto;
+    padding-top: clamp(88px, 10vw, 120px);
+    padding-bottom: 110px;
+  }
+
+  .legal-main > h1,
+  .legal-main > .legal-block {
+    width: min(100%, 720px);
+  }
+
+  .legal-contact::before {
+    inset: -86px 0 auto;
+    height: 88px;
+  }
+
+  .legal-contact .contact-footer {
+    padding-top: 52px;
+  }
+
+  .legal-jump-wrap {
+    padding-bottom: 18px;
+  }
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 56px 16px;
+  }
+
+  .site-menu-nav {
+    padding: 92px 16px 56px;
+    gap: 14px;
+  }
+
+  .site-menu-link {
+    min-height: 98px;
+    padding: 20px 14px 24px 22px;
+    border-width: 3px;
+    font-size: clamp(2rem, 10.6vw, 2.9rem);
+  }
+
+  .site-menu-link::before {
+    width: 30px;
+    height: 3px;
+  }
+
+  .site-menu-link::after {
+    width: 3px;
+    height: 30px;
+  }
+
+  .site-menu-link:hover::before,
+  .site-menu-link:focus-visible::before {
+    width: calc(100% - 3px);
+  }
+
+  .site-menu-link:hover::after,
+  .site-menu-link:focus-visible::after {
+    left: calc(100% - 3px);
+  }
+
+  .hero-line {
+    width: 54vw;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 14vw, 4.6rem);
+  }
+
+  .project-row,
+  .project-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .project-count {
+    justify-self: end;
+  }
+
+  .contact::before {
+    clip-path: polygon(0 48%, 100% 100%, 100% 100%, 0 100%);
+  }
+
+  .contact-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .footer-actions {
+    align-items: flex-start;
+  }
+
+  .skills-frame {
+    padding: 62px 16px 58px;
+    border-width: 2px;
+  }
+
+  .skills-title {
+    width: min(100%, 410px);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 10px;
+    margin-bottom: 46px;
+  }
+
+  .skills-bottom-copy {
+    width: min(100%, 330px);
+    margin-inline: auto;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 0.15rem 0.45rem;
+    font-size: clamp(0.95rem, 4.6vw, 1.18rem);
+  }
+
+  .skills-bottom-copy img {
+    margin-right: 0;
+  }
+
+  .legal-main {
+    padding-top: 72px;
+    padding-bottom: 86px;
+  }
+
+  .legal-main > h1,
+  .legal-main > .legal-block {
+    width: 100%;
+  }
+
+  .legal-main h1 {
+    font-size: clamp(2.45rem, 12vw, 3.5rem);
+    margin-bottom: 26px;
+  }
+
+  .legal-jump-wrap {
+    padding: 0 16px 16px;
+  }
+
+  .legal-jump-home {
+    width: 88px;
+    height: 60px;
+  }
+
+  .legal-jump-home img {
+    width: 72px;
+  }
+
+  .legal-contact::before {
+    inset: -72px 0 auto;
+    height: 74px;
+    clip-path: polygon(0 42%, 100% 100%, 100% 100%, 0 100%);
+  }
+
+  .legal-contact .contact-footer {
+    padding-top: 40px;
+  }
+
+  .legal-contact .legal-mini {
+    padding-bottom: 20px;
+  }
+}
