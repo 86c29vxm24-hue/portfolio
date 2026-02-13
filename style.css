@@ -182,7 +182,7 @@ h2 {
 }
 
 .hero {
-  --hero-side-y: 80%;
+  --hero-side-y: 88%;
   --scroll-visual-offset: 76px;
   min-height: 100vh;
   display: grid;
