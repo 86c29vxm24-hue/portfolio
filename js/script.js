@@ -323,3 +323,58 @@ if (toTopButton) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
+const portfolioRows = Array.from(document.querySelectorAll(".project-row"));
+const mobileProjectsQuery = window.matchMedia("(max-width: 980px)");
+let portfolioScrollObserver = null;
+
+const setupPortfolioScrollReveal = () => {
+  if (!portfolioRows.length) {
+    return;
+  }
+
+  if (portfolioScrollObserver) {
+    portfolioScrollObserver.disconnect();
+    portfolioScrollObserver = null;
+  }
+
+  portfolioRows.forEach((row) => {
+    row.classList.remove("is-inview");
+  });
+
+  if (!mobileProjectsQuery.matches) {
+    return;
+  }
+
+  if (!("IntersectionObserver" in window)) {
+    portfolioRows.forEach((row) => {
+      row.classList.add("is-inview");
+    });
+    return;
+  }
+
+  portfolioScrollObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("is-inview", entry.isIntersecting);
+      });
+    },
+    {
+      threshold: 0.42,
+      rootMargin: "0px 0px -16% 0px",
+    }
+  );
+
+  portfolioRows.forEach((row) => {
+    portfolioScrollObserver.observe(row);
+  });
+};
+
+if (portfolioRows.length) {
+  setupPortfolioScrollReveal();
+  if (typeof mobileProjectsQuery.addEventListener === "function") {
+    mobileProjectsQuery.addEventListener("change", setupPortfolioScrollReveal);
+  } else if (typeof mobileProjectsQuery.addListener === "function") {
+    mobileProjectsQuery.addListener(setupPortfolioScrollReveal);
+  }
+}
