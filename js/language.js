@@ -25,6 +25,15 @@ const translations = {
     project_2: "Projekt 02 Screenshot",
     project_3: "Projekt 03 Screenshot",
     project_4: "Projekt 04 Screenshot",
+    project_join_desc:
+      "Task-Manager nach dem Kanban-Prinzip. Aufgaben per Drag-and-drop organisieren, Nutzer zuweisen und Kategorien strukturieren.",
+    project_el_pollo_desc:
+      "2D Jump-and-Run in Vanilla JavaScript mit Charakteranimationen, Bossfight-Logik und Soundeffekten.",
+    project_pokedex_desc:
+      "Pokedex mit externer API: Pokemon laden, filtern und Detailansichten in einer klaren UI anzeigen.",
+    project_join_github_aria: "Join Repository auf GitHub",
+    project_el_pollo_github_aria: "El Pollo Loco Repository auf GitHub",
+    project_pokedex_github_aria: "Pokedex Repository auf GitHub",
     references_title: "Referenzen",
     references_lead: "Ich arbeite eigenstaendig und gleichzeitig teamorientiert. Kurzes Feedback aus Projekten:",
     quote_1: "\"Zuverlaessig, stark in der Umsetzung und mit gutem Blick fuer Details. Die Kommunikation war jederzeit klar.\"",
@@ -101,6 +110,15 @@ const translations = {
     project_2: "Project 02 Screenshot",
     project_3: "Project 03 Screenshot",
     project_4: "Project 04 Screenshot",
+    project_join_desc:
+      "Task manager inspired by the Kanban system. Organize tasks with drag and drop, assign users, and structure categories.",
+    project_el_pollo_desc:
+      "2D jump-and-run game in vanilla JavaScript with character animations, boss-fight logic, and sound effects.",
+    project_pokedex_desc:
+      "Pokedex powered by an external API: load Pokemon, filter results, and show clean detail views.",
+    project_join_github_aria: "Join repository on GitHub",
+    project_el_pollo_github_aria: "El Pollo Loco repository on GitHub",
+    project_pokedex_github_aria: "Pokedex repository on GitHub",
     references_title: "References",
     references_lead: "I work independently while staying highly collaborative. A few project references:",
     quote_1: "\"Reliable, strong execution, and a sharp eye for detail. Communication was clear throughout.\"",
