@@ -926,7 +926,7 @@ h2 {
 
 .contact {
   position: relative;
-  margin-top: 76px;
+  margin-top: 24px;
   color: #f5f5f5;
   background: var(--night);
   width: 100%;
@@ -937,11 +937,10 @@ h2 {
 .contact::before {
   content: "";
   position: absolute;
-  inset: -64px 0 auto;
-  height: 110px;
+  inset: -150px 0 auto;
+  height: 152px;
   background: var(--night);
-  transform: skewY(-8deg);
-  transform-origin: top right;
+  clip-path: polygon(0 36%, 100% 100%, 100% 100%, 0 100%);
 }
 
 .contact > * {
@@ -981,10 +980,35 @@ h2 {
 }
 
 .privacy-row input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
   margin-top: 2px;
-  accent-color: var(--accent);
+  border: 1.5px solid #f5f5f5;
+  background: var(--night);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.privacy-row input[type="checkbox"]::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  clip-path: polygon(14% 53%, 0 67%, 43% 100%, 100% 21%, 84% 8%, 43% 74%);
+  background: #f5f5f5;
+  transform: scale(0);
+  transition: transform 120ms ease-in-out;
+}
+
+.privacy-row input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.privacy-row input[type="checkbox"]:focus-visible {
+  outline: 2px solid #f5f5f5;
+  outline-offset: 2px;
 }
 
 .contact-form input,
@@ -1311,7 +1335,7 @@ h2 {
   }
 
   .contact::before {
-    transform: skewY(-10deg);
+    clip-path: polygon(0 48%, 100% 100%, 100% 100%, 0 100%);
   }
 
   .contact-footer {
