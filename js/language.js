@@ -68,11 +68,11 @@ const translations = {
     legal_home: "Home",
     imprint_h1: "Impressum",
     imprint_section_1_title: "Angaben gemaess Paragraph 5 TMG",
-    imprint_section_1_body_html: "Vorname Nachname<br />Strasse Hausnummer<br />PLZ Ort<br />Deutschland",
+    imprint_section_1_body_html: "Fatih Yalcin<br />Nagelschmiedgasse 24b<br />50827 Köln<br />Deutschland",
     imprint_section_2_title: "Kontakt",
-    imprint_section_2_body_html: "Telefon: +49 000 000000<br />E-Mail: deine-mail@example.com",
+    imprint_section_2_body_html: "Telefon: 01622311158<br />E-Mail: Yalcin_Fatih@web.de",
     imprint_section_3_title: "Verantwortlich fuer den Inhalt",
-    imprint_section_3_body_html: "Vorname Nachname<br />Strasse Hausnummer<br />PLZ Ort",
+    imprint_section_3_body_html: "Fatih Yalcin<br />Nagelschmiedgasse 24b<br />50827 Köln",
     imprint_section_4_title: "Haftungshinweis",
     imprint_section_4_body:
       "Trotz sorgfaeltiger inhaltlicher Kontrolle uebernehmen wir keine Haftung fuer die Inhalte externer Links. Fuer den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.",
@@ -81,7 +81,7 @@ const translations = {
     privacy_section_1_body:
       "Der Schutz deiner persoenlichen Daten ist wichtig. Diese Webseite verarbeitet nur die Daten, die fuer den Betrieb und die Kontaktaufnahme erforderlich sind.",
     privacy_section_2_title: "2. Verantwortliche Stelle",
-    privacy_section_2_body_html: "Vorname Nachname<br />Strasse Hausnummer<br />PLZ Ort<br />E-Mail: deine-mail@example.com",
+    privacy_section_2_body_html: "Fatih Yalcin<br />Nagelschmiedgasse 24b<br />50827 Köln<br />E-Mail: Yalcin_Fatih@web.de",
     privacy_section_3_title: "3. Verarbeitung im Kontaktformular",
     privacy_section_3_body:
       "Wenn du das Kontaktformular nutzt, werden Name, E-Mail-Adresse und Nachricht verarbeitet, um deine Anfrage zu beantworten. Die Verarbeitung erfolgt auf Grundlage deiner Einwilligung.",
@@ -159,11 +159,11 @@ const translations = {
     legal_home: "Home",
     imprint_h1: "Legal Notice",
     imprint_section_1_title: "Information according to Section 5 TMG",
-    imprint_section_1_body_html: "First name Last name<br />Street and number<br />ZIP City<br />Germany",
+    imprint_section_1_body_html: "Fatih Yalcin<br />Nagelschmiedgasse 24b<br />50827 Köln<br />Germany",
     imprint_section_2_title: "Contact",
-    imprint_section_2_body_html: "Phone: +49 000 000000<br />E-mail: your-mail@example.com",
+    imprint_section_2_body_html: "Phone: 01622311158<br />E-mail: Yalcin_Fatih@web.de",
     imprint_section_3_title: "Responsible for content",
-    imprint_section_3_body_html: "First name Last name<br />Street and number<br />ZIP City",
+    imprint_section_3_body_html: "Fatih Yalcin<br />Nagelschmiedgasse 24b<br />50827 Köln",
     imprint_section_4_title: "Liability notice",
     imprint_section_4_body:
       "Despite careful content control, we assume no liability for the content of external links. The operators of linked pages are solely responsible for their content.",
@@ -172,7 +172,7 @@ const translations = {
     privacy_section_1_body:
       "Protecting your personal data is important. This website only processes data required for operation and contact requests.",
     privacy_section_2_title: "2. Responsible entity",
-    privacy_section_2_body_html: "First name Last name<br />Street and number<br />ZIP City<br />E-mail: your-mail@example.com",
+    privacy_section_2_body_html: "Fatih Yalcin<br />Nagelschmiedgasse 24b<br />50827 Köln<br />E-mail: Yalcin_Fatih@web.de",
     privacy_section_3_title: "3. Processing in the contact form",
     privacy_section_3_body:
       "When you use the contact form, your name, e-mail address, and message are processed to reply to your request. Processing is based on your consent.",

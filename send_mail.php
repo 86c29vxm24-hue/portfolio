@@ -8,7 +8,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json; charset=utf-8');
 
 // IMPORTANT: Replace with your real mailbox address.
-$siteEmail = 'Yalcin_fatih@web.de';
+$siteEmail = 'Yalcin_Fatih@web.de';
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
