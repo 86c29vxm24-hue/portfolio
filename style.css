@@ -1037,6 +1037,40 @@ h2 {
   padding-bottom: 10px;
 }
 
+.footer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 60px;
+  line-height: 0;
+  transform-origin: center bottom;
+  transition: transform 170ms ease, filter 170ms ease;
+}
+
+.to-top-btn img {
+  width: 39px;
+  height: 55px;
+  display: block;
+}
+
+.to-top-btn:hover,
+.to-top-btn:focus-visible {
+  transform: translateY(-4px) scaleY(1.14);
+  filter: drop-shadow(0 6px 12px rgba(0, 188, 143, 0.35));
+}
+
+.to-top-btn:active {
+  transform: translateY(-1px) scaleY(1.05);
+}
+
 .socials {
   display: flex;
   gap: 18px;
@@ -1279,6 +1313,10 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+
+  .footer-actions {
+    align-items: flex-start;
   }
 
   .skills-frame {

@@ -1,6 +1,6 @@
 const form = document.getElementById("contact-form");
 const statusEl = document.getElementById("form-status");
-const t = window.t || ((key) => key);
+const translate = window.t || ((key) => key);
 
 if (form && statusEl) {
   const nameInput = form.elements.namedItem("name");
@@ -43,14 +43,14 @@ if (form && statusEl) {
     if (fieldName === "name") {
       const value = control.value.trim();
       if (value.length < 2) {
-        return t("error_name");
+        return translate("error_name");
       }
       return "";
     }
 
     if (fieldName === "email") {
       if (!control.validity.valid) {
-        return t("error_email");
+        return translate("error_email");
       }
       return "";
     }
@@ -58,14 +58,14 @@ if (form && statusEl) {
     if (fieldName === "message") {
       const value = control.value.trim();
       if (value.length < 10) {
-        return t("error_message");
+        return translate("error_message");
       }
       return "";
     }
 
     if (fieldName === "privacy") {
       if (!control.checked) {
-        return t("error_privacy");
+        return translate("error_privacy");
       }
       return "";
     }
@@ -144,12 +144,12 @@ if (form && statusEl) {
 
     const hasFieldErrors = validateTouchedFields();
     if (hasFieldErrors || !isFormValid()) {
-      showFormStatus(t("status_fix_fields"), "error");
+      showFormStatus(translate("status_fix_fields"), "error");
       updateSubmitState();
       return;
     }
 
-    showFormStatus(t("status_sending"), "");
+    showFormStatus(translate("status_sending"), "");
 
     if (submitButton) {
       submitButton.disabled = true;
@@ -184,10 +184,10 @@ if (form && statusEl) {
         touched[fieldName] = false;
         setFieldError(fieldName, "");
       });
-      showFormStatus(t("status_success"), "success");
+      showFormStatus(translate("status_success"), "success");
       updateSubmitState();
     } catch (error) {
-      showFormStatus(t("status_failed"), "error");
+      showFormStatus(translate("status_failed"), "error");
       updateSubmitState();
     }
   });
@@ -263,3 +263,12 @@ const inlineSkillSvgs = async () => {
 };
 
 inlineSkillSvgs();
+
+const toTopButton = document.querySelector(".to-top-btn");
+
+if (toTopButton) {
+  toTopButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
