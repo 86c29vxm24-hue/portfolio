@@ -231,6 +231,15 @@
 
   .reference-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 16px;
+  }
+
+  .reference-grid article {
+    width: min(100%, 360px);
+    height: auto;
+    min-height: 220px;
+    box-sizing: border-box;
   }
 
   .section-arrow {
@@ -386,6 +395,11 @@
 
   .project-row.reverse .project-count-top {
     justify-self: start;
+  }
+
+  .reference-grid article {
+    width: 100%;
+    min-height: 188px;
   }
 
   .contact::before {
