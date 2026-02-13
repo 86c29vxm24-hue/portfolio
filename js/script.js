@@ -245,6 +245,19 @@ const inlineSkillSvgs = async () => {
         const textStartY = viewBox ? viewBox.y + viewBox.height * 0.74 : 76;
         const shapeSelector = "path, rect, circle, ellipse, polygon, polyline, line";
 
+        if (alt === "Material Design") {
+          const paths = Array.from(svg.querySelectorAll("path"));
+          paths.forEach((path) => {
+            path.classList.remove("skill-svg-label");
+          });
+
+          const labelPath = paths[paths.length - 1];
+          if (labelPath) {
+            labelPath.classList.add("skill-svg-label");
+          }
+          return;
+        }
+
         svg.querySelectorAll(shapeSelector).forEach((shape) => {
           try {
             const box = shape.getBBox();
