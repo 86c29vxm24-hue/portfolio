@@ -141,6 +141,17 @@
     border-width: 2px;
   }
 
+  .section-arrow {
+    --arrow-hover-shift: 7px;
+    --arrow-active-shift: 18px;
+    --arrow-active-scale: 1.16;
+  }
+
+  .section-arrow-right {
+    --arrow-hover-shift: -7px;
+    --arrow-active-shift: -18px;
+  }
+
   .skills-title {
     width: min(100%, 410px);
   }

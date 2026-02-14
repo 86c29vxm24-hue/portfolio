@@ -244,8 +244,16 @@
   }
 
   .section-arrow {
+    --arrow-hover-shift: 8px;
+    --arrow-active-shift: 24px;
+    --arrow-active-scale: 1.2;
     height: 60px;
     margin: -10px auto -6px;
+  }
+
+  .section-arrow-right {
+    --arrow-hover-shift: -8px;
+    --arrow-active-shift: -24px;
   }
 
   .section-arrow-icon {

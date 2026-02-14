@@ -10,6 +10,7 @@ const runInitializer = (name) => {
   "initMenu",
   "initContactForm",
   "initSkillSvgInlining",
+  "initSectionArrows",
   "initToTopButton",
   "initPortfolio",
 ].forEach(runInitializer);

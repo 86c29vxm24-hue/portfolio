@@ -1,4 +1,9 @@
 .section-arrow {
+  --arrow-flip: 1;
+  --arrow-hover-shift: 10px;
+  --arrow-hover-scale: 1.06;
+  --arrow-active-shift: 34px;
+  --arrow-active-scale: 1.24;
   width: min(100%, var(--max-width));
   margin: -2px auto -14px;
   padding: 0 24px;
@@ -21,7 +26,9 @@
   background: var(--ink);
   -webkit-mask: url("../../img/icons/arrow 3.svg") center / contain no-repeat;
   mask: url("../../img/icons/arrow 3.svg") center / contain no-repeat;
-  transition: transform 120ms ease, background-color 120ms ease, filter 120ms ease;
+  transform: translateX(0) scale(1) scaleX(var(--arrow-flip));
+  transform-origin: center;
+  transition: transform 120ms ease;
 }
 
 .section-arrow-icon::before {
@@ -36,10 +43,9 @@
 
 .section-arrow-right {
   justify-content: flex-end;
-}
-
-.section-arrow-right .section-arrow-icon {
-  transform: scaleX(-1);
+  --arrow-flip: -1;
+  --arrow-hover-shift: -10px;
+  --arrow-active-shift: -34px;
 }
 
 .about-arrow {
@@ -48,26 +54,21 @@
 
 .section-arrow-link:hover .section-arrow-icon,
 .section-arrow-link:focus-visible .section-arrow-icon {
-  background: var(--contact-accent);
-  filter: drop-shadow(0 0 8px rgba(0, 188, 143, 0.45));
-  transform: translateY(6px) scale(1.02);
+  transform: translateX(var(--arrow-hover-shift)) scale(var(--arrow-hover-scale))
+    scaleX(var(--arrow-flip));
 }
 
 .section-arrow-link:active .section-arrow-icon {
-  transform: translateY(9px) scale(1.01);
+  transform: translateX(calc(var(--arrow-hover-shift) * 1.25)) scale(1.03)
+    scaleX(var(--arrow-flip));
 }
 
-.section-arrow-right .section-arrow-link:hover .section-arrow-icon,
-.section-arrow-right .section-arrow-link:focus-visible .section-arrow-icon {
-  transform: translateY(6px) scale(1.02) scaleX(-1);
-}
-
-.section-arrow-right .section-arrow-link:active .section-arrow-icon {
-  transform: translateY(9px) scale(1.01) scaleX(-1);
+.section-arrow.is-active .section-arrow-icon {
+  transform: translateX(var(--arrow-active-shift)) scale(var(--arrow-active-scale))
+    scaleX(var(--arrow-flip));
 }
 
 .section-arrow-link:focus-visible {
   outline: 2px solid rgba(0, 188, 143, 0.75);
   outline-offset: 3px;
 }
-
