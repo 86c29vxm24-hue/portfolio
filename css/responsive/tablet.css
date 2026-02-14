@@ -258,6 +258,7 @@
   }
 
   .skills-frame {
+    --skills-border-width: 3px;
     padding: 66px 26px 70px;
     border-width: 3px;
   }

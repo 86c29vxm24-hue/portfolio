@@ -135,6 +135,8 @@
   }
 
   .skills-frame {
+    --skills-title-width: min(100%, 410px);
+    --skills-border-width: 2px;
     padding: 62px 16px 58px;
     border-width: 2px;
   }
