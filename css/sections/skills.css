@@ -18,6 +18,11 @@
   width: min(100%, 536px);
   height: auto;
   display: block;
+  transition: filter 120ms ease;
+}
+
+.skills-title:hover {
+  filter: invert(52%) sepia(90%) saturate(1019%) hue-rotate(129deg) brightness(91%) contrast(102%);
 }
 
 .skills-bottom-copy {
