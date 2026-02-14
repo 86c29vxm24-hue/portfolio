@@ -152,6 +152,15 @@
     --arrow-active-shift: -18px;
   }
 
+  .about-arrow {
+    --arrow-anchor-shift: clamp(-74px, -22vw, -36px);
+    padding-right: 16px;
+  }
+
+  .portfolio-arrow {
+    --arrow-anchor-shift: clamp(34px, 12vw, 62px);
+  }
+
   .skills-title {
     width: min(100%, 410px);
   }

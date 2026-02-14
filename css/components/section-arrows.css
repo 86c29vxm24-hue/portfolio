@@ -1,5 +1,6 @@
 .section-arrow {
   --arrow-flip: 1;
+  --arrow-anchor-shift: 0px;
   --arrow-hover-shift: 10px;
   --arrow-hover-scale: 1.06;
   --arrow-active-shift: 34px;
@@ -16,6 +17,8 @@
   display: inline-flex;
   text-decoration: none;
   line-height: 0;
+  transform: translateX(var(--arrow-anchor-shift));
+  transition: transform 120ms ease;
 }
 
 .section-arrow-icon {
@@ -49,7 +52,12 @@
 }
 
 .about-arrow {
+  --arrow-anchor-shift: clamp(-340px, -24vw, -200px);
   padding-right: 74px;
+}
+
+.portfolio-arrow {
+  --arrow-anchor-shift: clamp(180px, 14vw, 260px);
 }
 
 .section-arrow-link:hover .section-arrow-icon,
