@@ -198,52 +198,74 @@ const t = (key) => {
   return (translations[language] && translations[language][key]) || key;
 };
 
-const applyLanguage = (lang) => {
-  const safeLang = translations[lang] ? lang : "de";
-  localStorage.setItem("portfolio_lang", safeLang);
-  document.documentElement.lang = safeLang;
+const getSafeLanguage = (lang) => (translations[lang] ? lang : "de");
 
+const getTranslation = (safeLang, key) =>
+  key && translations[safeLang][key] ? translations[safeLang][key] : "";
+
+const applyPlainTextTranslations = (safeLang) => {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
-    const key = element.getAttribute("data-i18n");
-    if (key && translations[safeLang][key]) {
-      element.textContent = translations[safeLang][key];
+    const text = getTranslation(safeLang, element.getAttribute("data-i18n"));
+    if (text) {
+      element.textContent = text;
     }
   });
+};
 
+const applyHtmlTranslations = (safeLang) => {
   document.querySelectorAll("[data-i18n-html]").forEach((element) => {
-    const key = element.getAttribute("data-i18n-html");
-    if (key && translations[safeLang][key]) {
-      element.innerHTML = translations[safeLang][key];
+    const html = getTranslation(safeLang, element.getAttribute("data-i18n-html"));
+    if (html) {
+      element.innerHTML = html;
     }
   });
+};
 
+const applyAriaTranslations = (safeLang) => {
   document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
-    const key = element.getAttribute("data-i18n-aria");
-    if (key && translations[safeLang][key]) {
-      element.setAttribute("aria-label", translations[safeLang][key]);
+    const label = getTranslation(safeLang, element.getAttribute("data-i18n-aria"));
+    if (label) {
+      element.setAttribute("aria-label", label);
     }
   });
+};
 
+const applyLanguageButtonState = (safeLang) => {
   langButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.lang === safeLang);
   });
 };
 
+const persistLanguage = (safeLang) => {
+  localStorage.setItem("portfolio_lang", safeLang);
+  document.documentElement.lang = safeLang;
+};
+
+const applyLanguage = (lang) => {
+  const safeLang = getSafeLanguage(lang);
+  persistLanguage(safeLang);
+  applyPlainTextTranslations(safeLang);
+  applyHtmlTranslations(safeLang);
+  applyAriaTranslations(safeLang);
+  applyLanguageButtonState(safeLang);
+};
+
 let isLanguageSwitcherInitialized = false;
 
-const initLanguageSwitcher = () => {
-  if (isLanguageSwitcherInitialized || !langButtons.length) {
-    return;
-  }
-
-  isLanguageSwitcherInitialized = true;
-
+const bindLanguageButtons = () => {
   langButtons.forEach((button) => {
     button.addEventListener("click", () => {
       applyLanguage(button.dataset.lang || "de");
     });
   });
+};
 
+const initLanguageSwitcher = () => {
+  if (isLanguageSwitcherInitialized || !langButtons.length) {
+    return;
+  }
+  isLanguageSwitcherInitialized = true;
+  bindLanguageButtons();
   applyLanguage(getLanguage());
 };
 
