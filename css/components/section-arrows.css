@@ -1,0 +1,73 @@
+.section-arrow {
+  width: min(100%, var(--max-width));
+  margin: -2px auto -14px;
+  padding: 0 24px;
+  height: 108px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.section-arrow-link {
+  display: inline-flex;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.section-arrow-icon {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  display: block;
+  background: var(--ink);
+  -webkit-mask: url("../../img/icons/arrow 3.svg") center / contain no-repeat;
+  mask: url("../../img/icons/arrow 3.svg") center / contain no-repeat;
+  transition: transform 120ms ease, background-color 120ms ease, filter 120ms ease;
+}
+
+.section-arrow-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  -webkit-mask: inherit;
+  mask: inherit;
+  transform: translateX(1.7px);
+}
+
+.section-arrow-right {
+  justify-content: flex-end;
+}
+
+.section-arrow-right .section-arrow-icon {
+  transform: scaleX(-1);
+}
+
+.about-arrow {
+  padding-right: 74px;
+}
+
+.section-arrow-link:hover .section-arrow-icon,
+.section-arrow-link:focus-visible .section-arrow-icon {
+  background: var(--contact-accent);
+  filter: drop-shadow(0 0 8px rgba(0, 188, 143, 0.45));
+  transform: translateY(6px) scale(1.02);
+}
+
+.section-arrow-link:active .section-arrow-icon {
+  transform: translateY(9px) scale(1.01);
+}
+
+.section-arrow-right .section-arrow-link:hover .section-arrow-icon,
+.section-arrow-right .section-arrow-link:focus-visible .section-arrow-icon {
+  transform: translateY(6px) scale(1.02) scaleX(-1);
+}
+
+.section-arrow-right .section-arrow-link:active .section-arrow-icon {
+  transform: translateY(9px) scale(1.01) scaleX(-1);
+}
+
+.section-arrow-link:focus-visible {
+  outline: 2px solid rgba(0, 188, 143, 0.75);
+  outline-offset: 3px;
+}
+

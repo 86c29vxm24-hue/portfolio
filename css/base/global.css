@@ -1,0 +1,65 @@
+:root {
+  --bg-paper: #f5f3eb;
+  --ink: #101010;
+  --ink-muted: #2f2f2f;
+  --line: #151515;
+  --accent: #00BC8F;
+  --contact-accent: #00BC8F;
+  --night: #030303;
+  --panel: #faf9f4;
+  --max-width: 1440px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg-paper);
+  font-family: "Overpass", "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.35;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+main {
+  overflow: hidden;
+}
+
+.section {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+  padding: 76px 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Syne", "Arial Black", sans-serif;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(2.1rem, 5.2vw, 4rem);
+}
+
+.section h2 {
+  transition: color 120ms ease;
+}
+
+.section h2:hover {
+  color: var(--accent);
+  cursor: pointer;
+}

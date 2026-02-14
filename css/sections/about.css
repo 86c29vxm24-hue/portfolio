@@ -1,0 +1,112 @@
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 460px);
+  grid-template-areas:
+    "title title"
+    "copy photo";
+  gap: 22px 12px;
+  align-items: start;
+}
+
+.about-title {
+  grid-area: title;
+  margin-top: 0;
+  justify-self: start;
+  width: fit-content;
+  text-align: left;
+  margin-left: clamp(26px, 8vw, 170px);
+  font-size: clamp(3rem, 6.2vw, 5.4rem);
+}
+
+.about-copy {
+  grid-area: copy;
+}
+
+.about-copy p {
+  max-width: 46ch;
+  margin: 12px 0 20px;
+  margin-left: clamp(26px, 8vw, 170px);
+  font-size: clamp(1.1rem, 1.7vw, 1.55rem);
+  line-height: 1.28;
+}
+
+.about-copy ul {
+  list-style: none;
+  margin: 0 0 24px;
+  margin-left: clamp(26px, 8vw, 170px);
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.about-copy li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+}
+
+.about-copy li img {
+  width: 24px;
+  height: 24px;
+}
+.about-photo {
+  --about-frame-offset: 16px;
+  grid-area: photo;
+  justify-self: start;
+  transform: translateX(-20px);
+  width: min(100%, 430px);
+  aspect-ratio: 1 / 1;
+  position: relative;
+  isolation: isolate;
+}
+
+.about-photo-img {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.about-photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 3px solid var(--line);
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: opacity 120ms ease, transform 120ms ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.about-photo:hover::after,
+.about-photo:focus-within::after {
+  opacity: 1;
+  transform: translate(var(--about-frame-offset), var(--about-frame-offset));
+}
+
+.about .primary-btn {
+  margin-left: clamp(130px, 18vw, 320px);
+}
+
+.photo-placeholder {
+  width: min(100%, 300px);
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--line);
+  background: linear-gradient(150deg, #ddd8cd, #b5b3ac);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  text-align: center;
+  font-weight: 500;
+}
+

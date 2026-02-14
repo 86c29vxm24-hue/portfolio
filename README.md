@@ -5,7 +5,13 @@ Dieses Projekt ist eine One-Page-Portfolio-Seite im Stil deiner Figma-Vorlage.
 ## Dateien
 
 - `index.html`: Struktur und Inhalte der Seite
-- `style.css`: komplettes Design und Responsive-Verhalten
+- `css/main.css`: zentraler CSS-Einstiegspunkt
+- `css/base/`: Fonts, Variablen, globale Regeln, Utilities
+- `css/layout/`: Header/Topbar und globale Layout-Helfer
+- `css/components/`: wiederverwendbare UI-Elemente (Menu, Buttons, Pfeile)
+- `css/sections/`: Bereichs-Styles (Hero, About, Skills, Portfolio, References, Contact)
+- `css/pages/`: seitenbezogene Styles (Legal Pages)
+- `css/responsive/`: Breakpoints für Tablet und Mobile
 - `js/language.js`: Sprachumschaltung (DE/EN)
 - `js/script.js`: Formular-Validierung und Versandlogik im Kontaktbereich
 - `img/icons/`: verwendete Skill-Icons
@@ -32,7 +38,7 @@ Passe in `index.html` an:
 - eigenes Profilbild (Platzhalter ersetzen)
 - Projektkarten (Screenshots, Titel, Links)
 - Referenzen (Namen/Zitate)
-- Social-Links (`GitHub`, `Mail`, `LinkedIn`)
+- Social-Links (`GitHub`, `Mail`)
 
 ## Kontaktformular
 

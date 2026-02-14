@@ -1,0 +1,146 @@
+.skills {
+  padding-top: 64px;
+}
+
+.skills-frame {
+  margin: 0 auto;
+  width: min(100%, 1140px);
+  border: 4px solid var(--line);
+  padding: 72px 78px 88px;
+  position: relative;
+}
+
+.skills-title {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -56%);
+  width: min(100%, 536px);
+  height: auto;
+  display: block;
+}
+
+.skills-bottom-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  flex-wrap: nowrap;
+  margin: 0;
+  font-size: clamp(1.05rem, 1.95vw, 2rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.skills-bottom-copy img {
+  width: clamp(42px, 4.5vw, 74px);
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+.skills-bottom-contact {
+  color: var(--contact-accent);
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: color 120ms ease, font-weight 120ms ease;
+}
+
+.skills-bottom-contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.06em;
+  width: 100%;
+  height: 0.08em;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 120ms ease;
+}
+
+.skills-bottom-contact:hover,
+.skills-bottom-contact:focus-visible {
+  color: var(--contact-accent);
+  font-weight: 700;
+}
+
+.skills-bottom-contact:hover::after,
+.skills-bottom-contact:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.skills-bottom-contact:focus-visible {
+  outline: 2px solid rgba(0, 188, 143, 0.75);
+  outline-offset: 3px;
+}
+
+.skills-grid {
+  list-style: none;
+  margin: 0 0 74px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 40px 40px;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.skill-item img {
+  width: min(100%, 100px);
+  height: auto;
+  display: block;
+}
+
+.skill-item .skill-svg {
+  width: min(100%, 100px);
+  height: auto;
+  display: block;
+}
+
+.skill-item .skill-svg [fill]:not([fill="none"]) {
+  transition: fill 120ms ease;
+}
+
+.skill-item .skill-svg [stroke]:not([stroke="none"]) {
+  transition: stroke 120ms ease;
+}
+
+.skill-item:hover img,
+.skill-item:focus-within img {
+  animation: skill-loop 120ms ease-in-out 1;
+}
+
+.skill-item:hover .skill-svg,
+.skill-item:focus-within .skill-svg {
+  animation: skill-loop 120ms ease-in-out 1;
+}
+
+.skill-item:hover .skill-svg .skill-svg-label[fill]:not([fill="none"]),
+.skill-item:focus-within .skill-svg .skill-svg-label[fill]:not([fill="none"]) {
+  fill: var(--contact-accent);
+}
+
+.skill-item:hover .skill-svg .skill-svg-label[stroke]:not([stroke="none"]),
+.skill-item:focus-within .skill-svg .skill-svg-label[stroke]:not([stroke="none"]) {
+  stroke: var(--contact-accent);
+}
+
+@keyframes skill-loop {
+  0% {
+    transform: translateX(0);
+  }
+  49% {
+    transform: translateX(118%);
+  }
+  50% {
+    transform: translateX(-118%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

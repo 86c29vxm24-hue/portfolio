@@ -1,0 +1,132 @@
+.topbar {
+  width: 100%;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-paper);
+}
+
+.topbar-inner {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+  padding: 24px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.lang-switch {
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.lang-btn {
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  cursor: pointer;
+  padding: 4px 10px;
+  line-height: 1;
+  opacity: 0.55;
+  position: relative;
+  transition: border-color 120ms ease, opacity 120ms ease;
+}
+
+.lang-btn::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 1px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 120ms ease;
+}
+
+.lang-btn.active {
+  border-color: var(--contact-accent);
+  opacity: 1;
+}
+
+.lang-btn:not(.active):hover,
+.lang-btn:not(.active):focus-visible {
+  opacity: 1;
+}
+
+.lang-btn:not(.active):hover::after,
+.lang-btn:not(.active):focus-visible::after {
+  transform: scaleX(1);
+}
+
+.menu-btn {
+  border: 0;
+  background: transparent;
+  display: grid;
+  justify-items: center;
+  gap: 9px;
+  width: 40px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-btn span {
+  width: 40px;
+  height: 4px;
+  background: var(--line);
+  transform-origin: center;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.menu-btn span:first-child,
+.menu-btn span:last-child {
+  width: 20px;
+}
+
+body.menu-open .menu-btn span:first-child,
+body.menu-open .menu-btn span:last-child {
+  width: 40px;
+}
+
+body.menu-open .menu-btn span:first-child {
+  transform: translateY(13px) rotate(45deg);
+}
+
+body.menu-open .menu-btn span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+body.menu-open .menu-btn span:last-child {
+  transform: translateY(-13px) rotate(-45deg);
+}
+

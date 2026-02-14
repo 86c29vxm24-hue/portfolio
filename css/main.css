@@ -1,0 +1,22 @@
+@import url("base/fonts.css");
+@import url("base/global.css");
+@import url("base/utilities.css");
+
+@import url("layout/header.css");
+@import url("layout/anchors.css");
+
+@import url("components/site-menu.css");
+@import url("components/buttons.css");
+@import url("components/section-arrows.css");
+
+@import url("sections/hero.css");
+@import url("sections/about.css");
+@import url("sections/skills.css");
+@import url("sections/portfolio.css");
+@import url("sections/references.css");
+@import url("sections/contact.css");
+
+@import url("pages/legal.css");
+
+@import url("responsive/tablet.css");
+@import url("responsive/mobile.css");
