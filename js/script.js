@@ -325,6 +325,9 @@ if (toTopButton) {
 }
 
 const portfolioRows = Array.from(document.querySelectorAll(".project-row"));
+const portfolioCardTargets = portfolioRows
+  .map((row) => row.querySelector(".project-card-image"))
+  .filter(Boolean);
 const mobileProjectsQuery = window.matchMedia("(max-width: 680px)");
 const tabletProjectsQuery = window.matchMedia("(min-width: 681px) and (max-width: 980px)");
 let portfolioScrollObserver = null;
@@ -406,17 +409,21 @@ const setupPortfolioScrollReveal = () => {
   portfolioScrollObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        entry.target.classList.toggle("is-inview", entry.isIntersecting);
+        const row = entry.target.closest(".project-row");
+        if (!row) {
+          return;
+        }
+        row.classList.toggle("is-inview", entry.isIntersecting);
       });
     },
     {
-      threshold: 0.42,
-      rootMargin: "0px 0px -16% 0px",
+      threshold: 0.28,
+      rootMargin: "0px 0px -8% 0px",
     }
   );
 
-  portfolioRows.forEach((row) => {
-    portfolioScrollObserver.observe(row);
+  portfolioCardTargets.forEach((target) => {
+    portfolioScrollObserver.observe(target);
   });
 };
 
