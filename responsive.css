@@ -498,7 +498,12 @@
   }
 
   .footer-actions {
+    width: 100%;
     align-items: flex-start;
+  }
+
+  .to-top-btn {
+    align-self: flex-end;
   }
 
   .skills-frame {
