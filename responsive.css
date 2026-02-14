@@ -27,6 +27,7 @@
     width: min(100%, 360px);
     transform: none;
     align-items: flex-start;
+    container-type: inline-size;
   }
 
   .hero h1 {
@@ -346,6 +347,29 @@
   }
 }
 
+@media (min-width: 981px) and (max-width: 1260px) {
+  .hero-content {
+    transform: translateY(-4vh);
+  }
+
+  .hero h1 {
+    font-size: clamp(5.1rem, 10.1vw, 6.95rem);
+    line-height: 0.94;
+  }
+
+  .hero-meta {
+    gap: clamp(24px, 4vw, 44px);
+  }
+
+  .hero-line {
+    width: clamp(400px, 57vw, 620px);
+  }
+
+  .accent {
+    font-size: clamp(2.1rem, 3.9vw, 2.75rem);
+  }
+}
+
 @media (max-width: 680px) {
   .section {
     padding: 56px 16px;
@@ -383,14 +407,25 @@
     left: calc(100% - 3px);
   }
 
+  .hero-content {
+    width: 100%;
+    margin-top: clamp(34px, 9vh, 64px);
+  }
+
   .hero-line {
     width: 100%;
   }
 
   .hero h1 {
-    font-size: clamp(2.7rem, 11.1vw, 3.9rem);
+    font-size: clamp(2.7rem, 11.1vw, 3.5rem);
     line-height: 0.93;
     letter-spacing: -0.018em;
+  }
+
+  @supports (font-size: 1cqw) {
+    .hero h1 {
+      font-size: clamp(2.35rem, 15.7cqw, 3.5rem);
+    }
   }
 
   .hero {
@@ -421,7 +456,7 @@
 
   .scroll-hint {
     right: 12px;
-    bottom: 34px;
+    bottom: 46px;
   }
 
   .scroll-hint img {
@@ -534,5 +569,72 @@
 
   .legal-contact .legal-mini {
     padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .hero h1 {
+    font-size: clamp(2.05rem, 14.3vw, 2.95rem);
+    line-height: 0.94;
+    letter-spacing: -0.014em;
+  }
+
+  .hero-meta {
+    grid-template-columns: minmax(84px, 1fr) auto;
+    gap: 4px;
+  }
+
+  .accent {
+    font-size: clamp(1.2rem, 8.2vw, 1.9rem);
+  }
+
+  .hero-side {
+    left: 14px;
+    bottom: 58px;
+    font-size: 0.9rem;
+  }
+
+  .scroll-hint {
+    right: 8px;
+    bottom: 38px;
+  }
+
+  .scroll-hint img {
+    width: 74px;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero {
+    padding-inline: 10px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 14.8vw, 2.45rem);
+    line-height: 0.95;
+  }
+
+  .hero-meta {
+    grid-template-columns: minmax(72px, 1fr) auto;
+    gap: 3px;
+  }
+
+  .accent {
+    font-size: clamp(1rem, 7.2vw, 1.55rem);
+  }
+
+  .hero-side {
+    left: 10px;
+    bottom: 52px;
+    font-size: 0.82rem;
+  }
+
+  .scroll-hint {
+    right: 6px;
+    bottom: 32px;
+  }
+
+  .scroll-hint img {
+    width: 68px;
   }
 }
