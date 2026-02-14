@@ -47,10 +47,6 @@
   cursor: default;
 }
 
-.legal-block h2:hover {
-  color: var(--accent);
-}
-
 .legal-block p {
   margin: 0;
   color: var(--ink);
@@ -109,4 +105,3 @@
 .legal-contact .legal-mini {
   padding-bottom: 26px;
 }
-
