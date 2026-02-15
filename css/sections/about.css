@@ -10,12 +10,17 @@
 
 .about-title {
   grid-area: title;
-  margin-top: 0;
-  justify-self: start;
-  width: fit-content;
-  text-align: left;
-  margin-left: clamp(26px, 8vw, 170px);
-  font-size: clamp(3rem, 6.2vw, 5.4rem);
+  width: min(100%, 619px);
+  min-height: 78px;
+  margin: 0 auto;
+  justify-self: center;
+  text-align: center;
+  font-family: "Syne", "Arial Black", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: clamp(3rem, 6.2vw, 78px);
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
 
 .about-copy {
@@ -109,4 +114,3 @@
   text-align: center;
   font-weight: 500;
 }
-

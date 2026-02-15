@@ -4,7 +4,15 @@
 }
 
 .portfolio h2 {
-  font-size: clamp(3rem, 6.2vw, 5.4rem);
+  width: min(100%, 538px);
+  min-height: 78px;
+  margin-inline: auto;
+  font-family: "Syne", "Arial Black", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: clamp(3rem, 6.2vw, 78px);
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
 
 .section-lead {
